@@ -2,11 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return response()->json([
-        'company' => 'DIGIHUB INNOVATION CENTER PVT. LTD.',
-        'status' => 'online',
-        'api_version' => 'v1',
-        'api_docs' => '/api/v1/health',
-    ]);
-});
+Route::get('/{any?}', function () {
+    return file_get_contents(public_path('index.html'));
+})->where('any', '^(?!api).*$');
