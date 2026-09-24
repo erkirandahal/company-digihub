@@ -13,21 +13,27 @@ for p in /opt/cpanel/ea-php83/root/usr/bin/php /opt/cpanel/ea-php84/root/usr/bin
 done
 echo "Using PHP: $PHP ($($PHP -r 'echo PHP_VERSION;'))"
 
-# Composer: use cPanel's, or download a local copy once.
-COMPOSER=/opt/cpanel/composer/bin/composer
-if [ ! -f "$COMPOSER" ]; then
+# Composer: use the server's copy if there is one, else download a local copy once.
+# (-d allow_url_fopen=1: this host turns it off for command-line PHP, Composer needs it)
+PHPX="$PHP -d allow_url_fopen=1 -d memory_limit=-1"
+COMPOSER=""
+for c in /opt/cpanel/composer/bin/composer /usr/local/bin/composer "$HOME/composer.phar"; do
+  if [ -f "$c" ]; then COMPOSER="$c"; break; fi
+done
+if [ -z "$COMPOSER" ]; then
+  echo "Downloading composer..."
+  curl -sS -o "$HOME/composer-setup.php" https://getcomposer.org/installer
+  $PHPX "$HOME/composer-setup.php" --install-dir="$HOME" --filename=composer.phar
+  rm -f "$HOME/composer-setup.php"
   COMPOSER="$HOME/composer.phar"
-  if [ ! -f "$COMPOSER" ]; then
-    echo "Downloading composer..."
-    curl -sS https://getcomposer.org/installer | $PHP -- --install-dir="$HOME" --filename=composer.phar
-  fi
 fi
+echo "Using composer: $COMPOSER"
 
 # Folders Laravel needs (not stored in git)
 mkdir -p storage/framework/{cache/data,sessions,views} storage/logs storage/app/public bootstrap/cache
 
 echo "Installing PHP packages..."
-$PHP "$COMPOSER" install --no-dev --optimize-autoloader --no-interaction --no-progress
+$PHPX "$COMPOSER" install --no-dev --optimize-autoloader --no-interaction --no-progress
 
 # First deploy: create .env and stop so you can fill it in
 if [ ! -f .env ]; then
