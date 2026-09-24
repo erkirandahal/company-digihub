@@ -3,7 +3,7 @@
 # (or when the GitHub Action triggers a deploy). See .cpanel.yml.
 set -e
 
-APP="$HOME/company-cms/backend"
+APP="$HOME/pragyainnovative/backend"
 cd "$APP"
 
 # Pick PHP 8.3 (or 8.2) CLI - the plain "php" on many cPanel servers is an older version.
@@ -34,14 +34,14 @@ if [ ! -f .env ]; then
   cp .env.example .env
   $PHP artisan key:generate --force
   echo "=================================================================="
-  echo " .env created. Edit company-cms/backend/.env in File Manager"
+  echo " .env created. Edit pragyainnovative/backend/.env in File Manager"
   echo " (database, APP_URL, APP_ENV=production ...) then deploy again."
   echo "=================================================================="
   exit 0
 fi
 if grep -q '^APP_ENV=local' .env; then
   echo "=================================================================="
-  echo " .env still has APP_ENV=local. Edit company-cms/backend/.env first,"
+  echo " .env still has APP_ENV=local. Edit pragyainnovative/backend/.env first,"
   echo " then deploy again. Nothing else was changed."
   echo "=================================================================="
   exit 0
