@@ -74,6 +74,5 @@ chmod -R 775 storage bootstrap/cache
 $PHP artisan optimize:clear
 $PHP artisan config:cache
 $PHP artisan route:cache
-$PHP artisan view:cache
 
 echo "Deploy finished OK."
