@@ -21,3 +21,4 @@ backend/bootstrap/cache/*.php
 backend/storage/framework/
 backend/storage/app/.seeded
 backend/storage/app/private/
+backend/public/storage
