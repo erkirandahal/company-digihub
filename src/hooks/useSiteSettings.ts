@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { apiClient, getStorageUrl } from '../services/api';
+import { applyPrimaryColor } from '../utils/colorRamp';
 
 export interface SocialLink {
   platform: 'Facebook' | 'LinkedIn' | 'Twitter/X' | 'Instagram' | 'YouTube' | 'GitHub';
@@ -93,6 +94,8 @@ function applyDocumentMeta(data: SiteSettings) {
     }
     link.href = href;
   }
+
+  applyPrimaryColor(data.primary_color);
 }
 
 // Seed the in-memory cache from localStorage synchronously so a repeat visit

@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { PublicLayout } from './components/layout/PublicLayout';
 import { HomePage } from './pages/public/HomePage';
 import { AboutPage } from './pages/public/AboutPage';
+import { TeamPage } from './pages/public/TeamPage';
 import { ServicesPage } from './pages/public/ServicesPage';
 import { ServiceDetailPage } from './pages/public/ServiceDetailPage';
 import { SolutionsPage } from './pages/public/SolutionsPage';
@@ -34,6 +35,9 @@ import { AdminClientsPage } from './pages/admin/AdminClientsPage';
 import { AdminPopupsPage } from './pages/admin/AdminPopupsPage';
 import { AdminSubscribersPage } from './pages/admin/AdminSubscribersPage';
 import { AdminSettingsPage } from './pages/admin/AdminSettingsPage';
+import { AdminNavigationPage } from './pages/admin/AdminNavigationPage';
+import { AdminHeroSlidesPage } from './pages/admin/AdminHeroSlidesPage';
+import { AdminHomepageLayoutPage } from './pages/admin/AdminHomepageLayoutPage';
 
 export default function App() {
   return (
@@ -43,6 +47,7 @@ export default function App() {
         <Route path="/" element={<PublicLayout />}>
           <Route index element={<HomePage />} />
           <Route path="about" element={<AboutPage />} />
+          <Route path="team" element={<TeamPage />} />
           <Route path="services" element={<ServicesPage />} />
           <Route path="services/:slug" element={<ServiceDetailPage />} />
           <Route path="solutions" element={<SolutionsPage />} />
@@ -79,6 +84,9 @@ export default function App() {
           <Route path="team" element={<AdminTeamPage />} />
           <Route path="clients" element={<AdminClientsPage />} />
           <Route path="popups" element={<AdminPopupsPage />} />
+          <Route path="navigation" element={<AdminNavigationPage />} />
+          <Route path="hero-slides" element={<AdminHeroSlidesPage />} />
+          <Route path="homepage-layout" element={<AdminHomepageLayoutPage />} />
           <Route path="subscribers" element={<AdminSubscribersPage />} />
           <Route path="settings" element={<AdminSettingsPage />} />
         </Route>

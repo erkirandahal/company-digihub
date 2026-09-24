@@ -1,8 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { CheckCircle2, ArrowRight, ShieldCheck, Target, Eye, Award, Code2, Users } from 'lucide-react';
-import { corporateApi, getStorageUrl } from '../../services/api';
-import { TeamMember } from '../../types';
+import { CheckCircle2, Target, Eye, Award } from 'lucide-react';
 import { usePageMeta } from '../../hooks/usePageMeta';
 
 export const AboutPage: React.FC = () => {
@@ -11,11 +9,6 @@ export const AboutPage: React.FC = () => {
     description:
       'Digihub Innovation Center Pvt. Ltd. is an established technology and software engineering firm delivering mission-critical enterprise systems and municipal e-governance platforms.',
   });
-  const [team, setTeam] = useState<TeamMember[]>([]);
-
-  useEffect(() => {
-    corporateApi.getTeam().then((res) => setTeam(res.data || []));
-  }, []);
 
   return (
     <div className="space-y-20 pb-20">
@@ -124,60 +117,6 @@ export const AboutPage: React.FC = () => {
               </p>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Leadership & Engineering Team */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-2xl mb-12">
-          <span className="text-xs font-bold uppercase tracking-wider text-emerald-800 bg-emerald-100 px-3 py-1 rounded">
-            Engineering Team
-          </span>
-          <h2 className="text-3xl font-extrabold text-slate-900 tracking-tight mt-2">
-            Technical Leadership
-          </h2>
-          <p className="text-slate-600 text-sm mt-1">
-            Engineers with extensive track records in full-stack architecture, spatial GIS systems, and municipal governance portals.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {team.map((member) => (
-            <div
-              key={member.id}
-              className="bg-white border border-slate-200 rounded-2xl p-6 shadow-xs flex flex-col justify-between"
-            >
-              <div>
-                {member.photo ? (
-                  <img
-                    src={getStorageUrl(member.photo)}
-                    alt={member.name}
-                    className="w-14 h-14 rounded-2xl object-cover mb-4"
-                  />
-                ) : (
-                  <div className="w-14 h-14 rounded-2xl bg-indigo-50 text-indigo-700 flex items-center justify-center font-bold text-lg mb-4">
-                    {member.name.split(' ').map((n) => n[0]).join('')}
-                  </div>
-                )}
-                <h3 className="text-lg font-bold text-slate-900">{member.name}</h3>
-                <p className="text-xs font-semibold text-emerald-600 mb-3">{member.position}</p>
-                <p className="text-slate-600 text-xs leading-relaxed mb-4">
-                  {member.biography}
-                </p>
-              </div>
-
-              <div className="pt-4 border-t border-slate-100 flex flex-wrap gap-1">
-                {member.skills?.map((s, idx) => (
-                  <span
-                    key={idx}
-                    className="px-2 py-0.5 rounded text-[10px] font-medium bg-slate-100 text-slate-700"
-                  >
-                    {s}
-                  </span>
-                ))}
-              </div>
-            </div>
-          ))}
         </div>
       </section>
 

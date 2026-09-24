@@ -1,4 +1,4 @@
-import { Service, Solution, Project, Blog, Technology, Industry, TeamMember, Client, Testimonial, Career, ContactInquiry, Lead, Popup, Setting } from '../types';
+import { Service, Solution, Project, Blog, Technology, Industry, TeamMember, Client, Testimonial, Career, ContactInquiry, Lead, Popup, Setting, HeroSlide } from '../types';
 
 export const INITIAL_SERVICES: Service[] = [
   {
@@ -327,6 +327,10 @@ export const INITIAL_CLIENTS: Client[] = [
     status: true,
   },
 ];
+
+// Empty by default — a hero slide with no real uploaded image isn't meaningful,
+// so the offline fallback intentionally has nothing to show until an admin adds one.
+export const INITIAL_HERO_SLIDES: HeroSlide[] = [];
 
 export const INITIAL_TESTIMONIALS: Testimonial[] = [
   {

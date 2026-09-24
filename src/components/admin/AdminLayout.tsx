@@ -16,6 +16,9 @@ import {
   LogOut,
   ExternalLink,
   ShieldCheck,
+  Menu as MenuIcon,
+  GalleryHorizontal,
+  LayoutGrid,
 } from 'lucide-react';
 import { authApi } from '../../services/api';
 
@@ -40,6 +43,9 @@ export const AdminLayout: React.FC = () => {
     { name: 'Team Members', path: '/admin/team', icon: <UserCircle className="w-4 h-4" /> },
     { name: 'Clients & Partners', path: '/admin/clients', icon: <Building2 className="w-4 h-4" /> },
     { name: 'Popups & CTAs', path: '/admin/popups', icon: <Megaphone className="w-4 h-4" /> },
+    { name: 'Navigation Menu', path: '/admin/navigation', icon: <MenuIcon className="w-4 h-4" /> },
+    { name: 'Hero Slider', path: '/admin/hero-slides', icon: <GalleryHorizontal className="w-4 h-4" /> },
+    { name: 'Homepage Layout', path: '/admin/homepage-layout', icon: <LayoutGrid className="w-4 h-4" /> },
     { name: 'Subscribers', path: '/admin/subscribers', icon: <Users className="w-4 h-4" /> },
     { name: 'Settings & Audit', path: '/admin/settings', icon: <Settings className="w-4 h-4" /> },
   ];

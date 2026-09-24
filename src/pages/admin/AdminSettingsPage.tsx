@@ -220,6 +220,28 @@ export const AdminSettingsPage: React.FC = () => {
                 />
               </div>
             </div>
+
+            <div className="pt-2">
+              <label className="font-bold text-slate-700 block mb-1">Primary Brand Color</label>
+              <p className="text-[11px] text-slate-400 mb-2">
+                Applied live across the public site's buttons, links, badges, and active states — no rebuild needed.
+              </p>
+              <div className="flex items-center gap-3">
+                <input
+                  type="color"
+                  value={/^#[0-9a-fA-F]{6}$/.test(settings.primary_color || '') ? settings.primary_color : '#17adc8'}
+                  onChange={(e) => setSettings({ ...settings, primary_color: e.target.value })}
+                  className="w-12 h-10 rounded-lg border border-slate-300 cursor-pointer bg-slate-50"
+                />
+                <input
+                  type="text"
+                  value={settings.primary_color || ''}
+                  onChange={(e) => setSettings({ ...settings, primary_color: e.target.value })}
+                  placeholder="#17ADC8"
+                  className="w-32 px-3 py-2 bg-slate-50 border border-slate-300 rounded-xl focus:outline-none focus:border-indigo-500 font-mono"
+                />
+              </div>
+            </div>
           </div>
 
           <div className="space-y-4">

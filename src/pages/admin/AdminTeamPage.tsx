@@ -76,7 +76,7 @@ export const AdminTeamPage: React.FC = () => {
         <div>
           <h2 className="text-2xl font-black text-slate-900 tracking-tight">Team Members</h2>
           <p className="text-xs text-slate-500 mt-0.5">
-            Manage the leadership and engineering profiles shown on the public About page.
+            Manage the leadership and engineering profiles shown on the public Team page.
           </p>
         </div>
         <button

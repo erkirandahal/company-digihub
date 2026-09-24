@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import { Lock, Mail, ArrowRight, Code2 } from 'lucide-react';
-import { authApi } from '../../services/api';
+import { Lock, Mail, ArrowRight, ShieldCheck } from 'lucide-react';
+import { authApi, getStorageUrl } from '../../services/api';
+import { useSiteSettings } from '../../hooks/useSiteSettings';
 
 export const AdminLoginPage: React.FC = () => {
-  const [email, setEmail] = useState('admin@digihub.com.np');
-  const [password, setPassword] = useState('password123');
+  const { site_name, site_logo_url } = useSiteSettings();
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
@@ -26,41 +28,41 @@ export const AdminLoginPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-slate-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
-      <div className="sm:mx-auto sm:w-full sm:max-w-md text-center space-y-3">
-        <Link to="/" className="inline-flex items-center gap-3">
-          <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-indigo-500 to-indigo-700 text-white flex items-center justify-center shadow-lg shadow-indigo-600/20">
-            <Code2 className="w-7 h-7" />
-          </div>
+    <div className="min-h-screen bg-slate-50 relative overflow-hidden flex flex-col justify-center py-12 sm:px-6 lg:px-8">
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#e2e8f0_1px,transparent_1px),linear-gradient(to_bottom,#e2e8f0_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-60 pointer-events-none"></div>
+
+      <div className="relative sm:mx-auto sm:w-full sm:max-w-md text-center space-y-4">
+        <Link to="/" className="inline-flex items-center justify-center">
+          {site_logo_url ? (
+            <img src={getStorageUrl(site_logo_url)} alt={site_name || 'Site logo'} className="h-14 w-auto" />
+          ) : site_name ? (
+            <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-indigo-500 to-indigo-700 text-white flex items-center justify-center shadow-lg shadow-indigo-600/20 font-black text-xl">
+              {site_name[0]}
+            </div>
+          ) : (
+            <div className="w-14 h-14 rounded-2xl bg-slate-200 animate-pulse" />
+          )}
         </Link>
-        <h2 className="text-2xl font-black tracking-tight text-slate-900">
-          DIGIHUB MANAGEMENT PORTAL
-        </h2>
-        <p className="text-xs text-slate-500">
-          Sign in with your administrative credentials to manage enterprise modules.
-        </p>
+        <div className="space-y-1.5">
+          <div className="inline-flex items-center gap-1.5 text-indigo-700 text-xs font-bold uppercase tracking-wider">
+            <ShieldCheck className="w-3.5 h-3.5" />
+            <span>Administrative Portal</span>
+          </div>
+          {site_name ? (
+            <h2 className="text-2xl font-black tracking-tight text-slate-900">
+              {site_name}
+            </h2>
+          ) : (
+            <div className="h-7 w-56 mx-auto rounded bg-slate-200 animate-pulse" />
+          )}
+          <p className="text-xs text-slate-500">
+            Sign in with your administrative credentials to manage enterprise modules.
+          </p>
+        </div>
       </div>
 
-      <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md px-4">
+      <div className="relative mt-8 sm:mx-auto sm:w-full sm:max-w-md px-4">
         <div className="bg-white border border-slate-200 py-8 px-6 shadow-xl shadow-slate-200/60 rounded-2xl sm:px-10 text-slate-900 space-y-6">
-          {/* Quick Demo Fill Pill */}
-          <div className="p-3 bg-indigo-50 border border-indigo-200 rounded-xl text-xs text-indigo-800 flex items-center justify-between">
-            <div>
-              <span className="font-bold block">Seeded Administrative Account:</span>
-              <span className="text-[11px] text-indigo-700">admin@digihub.com.np / password123</span>
-            </div>
-            <button
-              type="button"
-              onClick={() => {
-                setEmail('admin@digihub.com.np');
-                setPassword('password123');
-              }}
-              className="px-2.5 py-1 rounded bg-indigo-700 hover:bg-indigo-800 text-white font-bold text-[10px]"
-            >
-              Fill
-            </button>
-          </div>
-
           <form onSubmit={handleLogin} className="space-y-4 text-xs">
             <div>
               <label className="font-semibold text-slate-700 block mb-1.5">
@@ -71,6 +73,8 @@ export const AdminLoginPage: React.FC = () => {
                 <input
                   type="text"
                   required
+                  autoComplete="username"
+                  placeholder="you@company.com"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   className="w-full pl-9 pr-4 py-2.5 bg-slate-50 border border-slate-300 rounded-xl text-slate-900 placeholder-slate-400 focus:outline-none focus:border-indigo-500"
@@ -87,6 +91,8 @@ export const AdminLoginPage: React.FC = () => {
                 <input
                   type="password"
                   required
+                  autoComplete="current-password"
+                  placeholder="••••••••"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   className="w-full pl-9 pr-4 py-2.5 bg-slate-50 border border-slate-300 rounded-xl text-slate-900 placeholder-slate-400 focus:outline-none focus:border-indigo-500"
@@ -112,7 +118,7 @@ export const AdminLoginPage: React.FC = () => {
 
           <div className="text-center pt-2 border-t border-slate-200">
             <Link to="/" className="text-xs text-slate-500 hover:text-indigo-700 transition-colors">
-              ← Return to Digihub Public Website
+              ← Return to {site_name || 'Public Website'}
             </Link>
           </div>
         </div>

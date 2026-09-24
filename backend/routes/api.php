@@ -24,6 +24,7 @@ use App\Http\Controllers\Api\V1\UserController;
 use App\Http\Controllers\Api\V1\AuditLogController;
 use App\Http\Controllers\Api\V1\SearchController;
 use App\Http\Controllers\Api\V1\PublicationController;
+use App\Http\Controllers\Api\V1\HeroSlideController;
 
 /*
 |--------------------------------------------------------------------------
@@ -61,6 +62,7 @@ Route::prefix('v1')->group(function () {
     Route::get('/team', [TeamController::class, 'index']);
     Route::get('/clients', [ClientController::class, 'index']);
     Route::get('/testimonials', [TestimonialController::class, 'index']);
+    Route::get('/hero-slides', [HeroSlideController::class, 'index']);
 
     // Blog & Insights
     Route::get('/blog', [BlogController::class, 'index']);
@@ -144,6 +146,10 @@ Route::prefix('v1')->group(function () {
 
             // Popups & Announcements
             Route::apiResource('popups', PopupController::class);
+
+            // Hero Slider
+            Route::get('/hero-slides', [HeroSlideController::class, 'adminIndex']);
+            Route::apiResource('hero-slides', HeroSlideController::class)->except(['index']);
 
             // Newsletter Subscribers
             Route::get('/subscribers', [NewsletterController::class, 'index']);

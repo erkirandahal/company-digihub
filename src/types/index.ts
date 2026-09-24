@@ -184,6 +184,27 @@ export interface Client {
   sort_order?: number;
 }
 
+export interface NavMenuItem {
+  id: string;
+  label: string;
+  path: string;
+  visible: boolean;
+  isCustom: boolean;
+  // Submenu items — a child cannot itself have children (2-level menu only).
+  children?: NavMenuItem[];
+}
+
+export interface HeroSlide {
+  id: number;
+  title: string;
+  subtitle?: string;
+  image?: string;
+  button_text?: string;
+  button_url?: string;
+  sort_order: number;
+  status: boolean;
+}
+
 export interface Testimonial {
   id: number;
   client_name: string;

@@ -1,27 +1,27 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, ArrowRight, ShieldCheck, PhoneCall, Code2 } from 'lucide-react';
+import { Menu, X, ArrowRight, ShieldCheck, PhoneCall, Code2, ChevronDown } from 'lucide-react';
 import { authApi, getStorageUrl } from '../../services/api';
 import { useSiteSettings } from '../../hooks/useSiteSettings';
+import { parseNavMenuItems } from '../../config/defaultNavMenu';
+import { NavMenuItem } from '../../types';
 
 export const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [openMobileSubmenu, setOpenMobileSubmenu] = useState<string | null>(null);
   const location = useLocation();
   const currentUser = authApi.getCurrentUser();
-  const { site_name, site_logo_url, address, phone } = useSiteSettings();
+  const { site_name, site_logo_url, address, phone, nav_menu_items } = useSiteSettings();
   const phoneHref = phone ? `tel:${phone.replace(/[^+\d]/g, '')}` : undefined;
 
-  const navLinks = [
-    { name: 'Services', path: '/services' },
-    { name: 'Solutions', path: '/solutions' },
-    { name: 'Projects', path: '/projects' },
-    { name: 'About', path: '/about' },
-    { name: 'Careers', path: '/careers' },
-    { name: 'Insights', path: '/blog' },
-    { name: 'Contact', path: '/contact' },
-  ];
+  const navLinks: NavMenuItem[] = parseNavMenuItems(nav_menu_items)
+    .filter((item) => item.visible)
+    .map((item) => ({ ...item, children: item.children?.filter((c) => c.visible) }));
 
   const isActive = (path: string) => location.pathname === path;
+  const isExternal = (path: string) => /^https?:\/\//i.test(path);
+  const isParentActive = (item: NavMenuItem) =>
+    isActive(item.path) || (item.children?.some((c) => isActive(c.path)) ?? false);
 
   return (
     <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200">
@@ -90,19 +90,79 @@ export const Navbar: React.FC = () => {
 
           {/* Desktop Nav Links */}
           <div className="hidden lg:flex items-center gap-1">
-            {navLinks.map((link) => (
-              <Link
-                key={link.path}
-                to={link.path}
-                className={`px-3 py-2 rounded-lg text-sm font-medium transition-all ${
-                  isActive(link.path)
-                    ? 'text-indigo-700 bg-indigo-50'
-                    : 'text-slate-700 hover:text-slate-900 hover:bg-slate-50'
-                }`}
-              >
-                {link.name}
-              </Link>
-            ))}
+            {navLinks.map((link) => {
+              const hasChildren = (link.children?.length ?? 0) > 0;
+
+              if (hasChildren) {
+                return (
+                  <div key={link.id} className="relative group">
+                    <button
+                      className={`px-3 py-2 rounded-lg text-sm font-medium transition-all flex items-center gap-1 ${
+                        isParentActive(link)
+                          ? 'text-indigo-700 bg-indigo-50'
+                          : 'text-slate-700 hover:text-slate-900 hover:bg-slate-50'
+                      }`}
+                    >
+                      <span>{link.label}</span>
+                      <ChevronDown className="w-3.5 h-3.5" />
+                    </button>
+                    <div className="absolute left-0 top-full pt-1 hidden group-hover:block z-50">
+                      <div className="min-w-[200px] bg-white border border-slate-200 rounded-xl shadow-lg py-1.5">
+                        {link.children!.map((child) =>
+                          isExternal(child.path) ? (
+                            <a
+                              key={child.id}
+                              href={child.path}
+                              target="_blank"
+                              rel="noreferrer"
+                              className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-indigo-700"
+                            >
+                              {child.label}
+                            </a>
+                          ) : (
+                            <Link
+                              key={child.id}
+                              to={child.path}
+                              className={`block px-4 py-2 text-sm ${
+                                isActive(child.path)
+                                  ? 'text-indigo-700 font-semibold bg-indigo-50'
+                                  : 'text-slate-700 hover:bg-slate-50 hover:text-indigo-700'
+                              }`}
+                            >
+                              {child.label}
+                            </Link>
+                          )
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                );
+              }
+
+              return isExternal(link.path) ? (
+                <a
+                  key={link.id}
+                  href={link.path}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="px-3 py-2 rounded-lg text-sm font-medium transition-all text-slate-700 hover:text-slate-900 hover:bg-slate-50"
+                >
+                  {link.label}
+                </a>
+              ) : (
+                <Link
+                  key={link.id}
+                  to={link.path}
+                  className={`px-3 py-2 rounded-lg text-sm font-medium transition-all ${
+                    isActive(link.path)
+                      ? 'text-indigo-700 bg-indigo-50'
+                      : 'text-slate-700 hover:text-slate-900 hover:bg-slate-50'
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
           </div>
 
           {/* Action CTA */}
@@ -131,20 +191,85 @@ export const Navbar: React.FC = () => {
         {/* Mobile menu dropdown */}
         {isOpen && (
           <div className="lg:hidden border-t border-slate-200 py-3 space-y-1">
-            {navLinks.map((link) => (
-              <Link
-                key={link.path}
-                to={link.path}
-                onClick={() => setIsOpen(false)}
-                className={`block px-3 py-2.5 rounded-md text-base font-medium ${
-                  isActive(link.path)
-                    ? 'text-indigo-700 bg-indigo-50 font-semibold'
-                    : 'text-slate-700 hover:bg-slate-50'
-                }`}
-              >
-                {link.name}
-              </Link>
-            ))}
+            {navLinks.map((link) => {
+              const hasChildren = (link.children?.length ?? 0) > 0;
+
+              if (hasChildren) {
+                const expanded = openMobileSubmenu === link.id;
+                return (
+                  <div key={link.id}>
+                    <button
+                      onClick={() => setOpenMobileSubmenu(expanded ? null : link.id)}
+                      className={`w-full flex items-center justify-between px-3 py-2.5 rounded-md text-base font-medium ${
+                        isParentActive(link)
+                          ? 'text-indigo-700 bg-indigo-50 font-semibold'
+                          : 'text-slate-700 hover:bg-slate-50'
+                      }`}
+                    >
+                      <span>{link.label}</span>
+                      <ChevronDown className={`w-4 h-4 transition-transform ${expanded ? 'rotate-180' : ''}`} />
+                    </button>
+                    {expanded && (
+                      <div className="pl-4 mt-1 space-y-1 border-l-2 border-slate-100 ml-3">
+                        {link.children!.map((child) =>
+                          isExternal(child.path) ? (
+                            <a
+                              key={child.id}
+                              href={child.path}
+                              target="_blank"
+                              rel="noreferrer"
+                              onClick={() => { setIsOpen(false); setOpenMobileSubmenu(null); }}
+                              className="block px-3 py-2 rounded-md text-sm text-slate-600 hover:bg-slate-50"
+                            >
+                              {child.label}
+                            </a>
+                          ) : (
+                            <Link
+                              key={child.id}
+                              to={child.path}
+                              onClick={() => { setIsOpen(false); setOpenMobileSubmenu(null); }}
+                              className={`block px-3 py-2 rounded-md text-sm ${
+                                isActive(child.path)
+                                  ? 'text-indigo-700 font-semibold bg-indigo-50'
+                                  : 'text-slate-600 hover:bg-slate-50'
+                              }`}
+                            >
+                              {child.label}
+                            </Link>
+                          )
+                        )}
+                      </div>
+                    )}
+                  </div>
+                );
+              }
+
+              return isExternal(link.path) ? (
+                <a
+                  key={link.id}
+                  href={link.path}
+                  target="_blank"
+                  rel="noreferrer"
+                  onClick={() => setIsOpen(false)}
+                  className="block px-3 py-2.5 rounded-md text-base font-medium text-slate-700 hover:bg-slate-50"
+                >
+                  {link.label}
+                </a>
+              ) : (
+                <Link
+                  key={link.id}
+                  to={link.path}
+                  onClick={() => setIsOpen(false)}
+                  className={`block px-3 py-2.5 rounded-md text-base font-medium ${
+                    isActive(link.path)
+                      ? 'text-indigo-700 bg-indigo-50 font-semibold'
+                      : 'text-slate-700 hover:bg-slate-50'
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
             <div className="pt-3">
               <Link
                 to="/request-quote"

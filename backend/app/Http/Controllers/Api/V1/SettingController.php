@@ -45,6 +45,13 @@ class SettingController extends Controller
                 );
             }
 
+            if ($key === 'primary_color' && $value && ! preg_match('/^#[0-9a-fA-F]{6}$/', $value)) {
+                return $this->errorResponse(
+                    'The primary color must be a 6-digit hex value (e.g. #17ADC8).',
+                    422
+                );
+            }
+
             if ($key === 'embeds' && $value) {
                 $embeds = json_decode($value, true) ?: [];
                 foreach ($embeds as $embed) {
@@ -93,7 +100,7 @@ class SettingController extends Controller
 
     private function typeForKey(string $key): string
     {
-        if (in_array($key, ['social_links', 'embeds'])) {
+        if (in_array($key, ['social_links', 'embeds', 'nav_menu_items', 'homepage_sections_order'])) {
             return 'json';
         }
 

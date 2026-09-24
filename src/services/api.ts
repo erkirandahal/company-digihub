@@ -20,6 +20,7 @@ import {
   DashboardMetrics,
   Publication,
   Client,
+  HeroSlide,
 } from '../types';
 
 import {
@@ -37,6 +38,7 @@ import {
   INITIAL_POPUPS,
   INITIAL_SETTINGS,
   INITIAL_CLIENTS,
+  INITIAL_HERO_SLIDES,
 } from './mockData';
 
 // Configurable API base URL as per Rule #6
@@ -132,6 +134,13 @@ class LocalStorageDataStore {
   }
   saveClients(clients: Client[]) {
     this.set('clients', clients);
+  }
+
+  getHeroSlides(): HeroSlide[] {
+    return this.get('hero_slides', INITIAL_HERO_SLIDES);
+  }
+  saveHeroSlides(slides: HeroSlide[]) {
+    this.set('hero_slides', slides);
   }
 
   getApplications(): JobApplication[] {
@@ -1248,6 +1257,62 @@ export const corporateApi = {
     safeApiCall(
       () => apiClient.get('/industries'),
       () => INITIAL_INDUSTRIES
+    ),
+};
+
+// -------------------------------------------------------------
+// Hero Slider
+// -------------------------------------------------------------
+export const heroSlidesApi = {
+  getActive: async () =>
+    safeApiCall(
+      () => apiClient.get('/hero-slides'),
+      () => INITIAL_HERO_SLIDES.filter((s) => s.status)
+    ),
+  getAllAdmin: async () =>
+    safeApiCall(
+      () => apiClient.get('/admin/hero-slides'),
+      () => store.getHeroSlides()
+    ),
+  create: async (payload: Partial<HeroSlide>) =>
+    safeApiCall(
+      () => apiClient.post('/admin/hero-slides', payload),
+      () => {
+        const slides = store.getHeroSlides();
+        const newSlide: HeroSlide = {
+          id: Date.now(),
+          title: payload.title || '',
+          subtitle: payload.subtitle,
+          image: payload.image,
+          button_text: payload.button_text,
+          button_url: payload.button_url,
+          sort_order: payload.sort_order ?? slides.length + 1,
+          status: payload.status ?? true,
+        };
+        slides.push(newSlide);
+        store.saveHeroSlides(slides);
+        store.addAuditLog(`Created hero slide: ${newSlide.title}`, 'hero_slides', String(newSlide.id));
+        return newSlide;
+      }
+    ),
+  update: async (id: number, payload: Partial<HeroSlide>) =>
+    safeApiCall(
+      () => apiClient.put(`/admin/hero-slides/${id}`, payload),
+      () => {
+        const slides = store.getHeroSlides().map((s) => (s.id === id ? { ...s, ...payload } : s));
+        store.saveHeroSlides(slides);
+        store.addAuditLog(`Updated hero slide #${id}`, 'hero_slides', String(id));
+        return slides.find((s) => s.id === id)!;
+      }
+    ),
+  delete: async (id: number) =>
+    safeApiCall(
+      () => apiClient.delete(`/admin/hero-slides/${id}`),
+      () => {
+        store.saveHeroSlides(store.getHeroSlides().filter((s) => s.id !== id));
+        store.addAuditLog(`Deleted hero slide #${id}`, 'hero_slides', String(id));
+        return {} as any;
+      }
     ),
 };
 

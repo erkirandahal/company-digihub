@@ -8,3 +8,9 @@ coverage/
 !.env.example
 backend/vendor/
 backend/storage/logs/
+
+# User-uploaded media (runtime content, not source) — keep the folders but
+# never commit what admins actually upload through the CMS.
+backend/storage/app/public/*
+!backend/storage/app/public/.gitignore
+backend/public/storage/
