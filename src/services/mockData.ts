@@ -268,6 +268,7 @@ export const INITIAL_SETTINGS: Setting[] = [
   { key: 'footer_about_text', value: 'Digihub Innovation Center Pvt. Ltd. provides IT, e-commerce, networking, training and printing services in Nepal.', group: 'footer', type: 'text' },
   { key: 'footer_newsletter_heading', value: 'Stay Updated with Digihub Innovation Center', group: 'footer', type: 'text' },
   { key: 'footer_newsletter_subtext', value: 'Occasional updates on our services, offers and technology tips.', group: 'footer', type: 'textarea' },
+  { key: 'footer_newsletter_enabled', value: 'true', group: 'footer', type: 'text' },
   { key: 'footer_copyright', value: '© 2026 Digihub Innovation Center Pvt. Ltd. All rights reserved.', group: 'footer', type: 'text' },
   {
     key: 'homepage_sections_order',

@@ -32,6 +32,7 @@ export const AdminSettingsPage: React.FC = () => {
     footer_newsletter_heading: 'Stay Updated with Digihub Innovation Center',
     footer_newsletter_subtext:
       'Occasional updates on our services, offers and technology tips.',
+    footer_newsletter_enabled: 'true',
   });
 
   const [auditLogs, setAuditLogs] = useState<AuditLog[]>([]);
@@ -440,7 +441,19 @@ export const AdminSettingsPage: React.FC = () => {
               ></textarea>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <label className="flex items-center gap-2.5 p-3 rounded-xl bg-slate-50 border border-slate-200 cursor-pointer w-fit">
+              <input
+                type="checkbox"
+                checked={settings.footer_newsletter_enabled === 'true' || settings.footer_newsletter_enabled === '1'}
+                onChange={(e) =>
+                  setSettings({ ...settings, footer_newsletter_enabled: e.target.checked ? 'true' : 'false' })
+                }
+                className="w-4 h-4 accent-emerald-600"
+              />
+              <span className="font-bold text-slate-700">Show Newsletter Signup Bar in Footer</span>
+            </label>
+
+            <div className={`grid grid-cols-1 sm:grid-cols-2 gap-4 ${settings.footer_newsletter_enabled === 'false' ? 'opacity-40 pointer-events-none' : ''}`}>
               <div>
                 <label className="font-bold text-slate-700 block mb-1">Newsletter Bar Heading</label>
                 <input

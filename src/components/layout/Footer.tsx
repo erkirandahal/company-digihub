@@ -31,7 +31,13 @@ export const Footer: React.FC = () => {
     footer_about_text,
     footer_newsletter_heading,
     footer_newsletter_subtext,
+    footer_newsletter_enabled,
   } = useSiteSettings();
+  // Default to shown when the setting hasn't been saved yet — only an explicit
+  // "off" (from Admin -> Settings) hides the newsletter bar.
+  const newsletterEnabled = footer_newsletter_enabled === undefined
+    || footer_newsletter_enabled === '1'
+    || footer_newsletter_enabled === 'true';
 
   const handleSubscribe = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -54,48 +60,50 @@ export const Footer: React.FC = () => {
 
   return (
     <footer className="bg-slate-50 text-slate-500 text-sm border-t border-slate-200">
-      {/* Upper Footer: Newsletter Bar */}
-      <div className="border-b border-slate-200 bg-white py-12 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
-          <div>
-            <h3 className="text-xl font-bold text-slate-900 mb-1">
-              {footer_newsletter_heading || 'Stay Updated with Digihub Innovation Center'}
-            </h3>
-            <p className="text-slate-500 text-sm max-w-xl">
-              {footer_newsletter_subtext ||
-                'Occasional updates on our services, offers and technology tips.'}
-            </p>
-          </div>
-          <div className="w-full md:w-auto">
-            {subscribed ? (
-              <div className="flex items-center gap-2 text-indigo-700 bg-indigo-50 border border-indigo-200 px-4 py-2.5 rounded-lg">
-                <CheckCircle2 className="w-5 h-5" />
-                <span className="font-medium text-sm">Thank you for subscribing!</span>
-              </div>
-            ) : (
-              <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-2 w-full max-w-md">
-                <input
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="Enter institutional email..."
-                  required
-                  className="px-4 py-2.5 rounded-lg bg-slate-50 border border-slate-300 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-indigo-500 text-sm w-full"
-                />
-                <button
-                  type="submit"
-                  disabled={loading}
-                  className="px-5 py-2.5 rounded-lg bg-indigo-700 hover:bg-indigo-800 text-white font-medium text-sm transition-colors flex items-center justify-center gap-2 whitespace-nowrap disabled:opacity-50"
-                >
-                  <Send className="w-4 h-4" />
-                  <span>{loading ? 'Subscribing...' : 'Subscribe'}</span>
-                </button>
-              </form>
-            )}
-            {error && <p className="text-rose-600 text-xs mt-1.5">{error}</p>}
+      {/* Upper Footer: Newsletter Bar — toggle from Admin -> Settings -> Header & Footer Content */}
+      {newsletterEnabled && (
+        <div className="border-b border-slate-200 bg-white py-12 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+            <div>
+              <h3 className="text-xl font-bold text-slate-900 mb-1">
+                {footer_newsletter_heading || 'Stay Updated with Digihub Innovation Center'}
+              </h3>
+              <p className="text-slate-500 text-sm max-w-xl">
+                {footer_newsletter_subtext ||
+                  'Occasional updates on our services, offers and technology tips.'}
+              </p>
+            </div>
+            <div className="w-full md:w-auto">
+              {subscribed ? (
+                <div className="flex items-center gap-2 text-indigo-700 bg-indigo-50 border border-indigo-200 px-4 py-2.5 rounded-lg">
+                  <CheckCircle2 className="w-5 h-5" />
+                  <span className="font-medium text-sm">Thank you for subscribing!</span>
+                </div>
+              ) : (
+                <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-2 w-full max-w-md">
+                  <input
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    placeholder="Enter institutional email..."
+                    required
+                    className="px-4 py-2.5 rounded-lg bg-slate-50 border border-slate-300 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-indigo-500 text-sm w-full"
+                  />
+                  <button
+                    type="submit"
+                    disabled={loading}
+                    className="px-5 py-2.5 rounded-lg bg-indigo-700 hover:bg-indigo-800 text-white font-medium text-sm transition-colors flex items-center justify-center gap-2 whitespace-nowrap disabled:opacity-50"
+                  >
+                    <Send className="w-4 h-4" />
+                    <span>{loading ? 'Subscribing...' : 'Subscribe'}</span>
+                  </button>
+                </form>
+              )}
+              {error && <p className="text-rose-600 text-xs mt-1.5">{error}</p>}
+            </div>
           </div>
         </div>
-      </div>
+      )}
 
       {/* Main Grid */}
       <div className="max-w-7xl mx-auto py-14 px-4 sm:px-6 lg:px-8">

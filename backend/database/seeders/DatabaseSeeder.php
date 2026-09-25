@@ -301,6 +301,7 @@ class DatabaseSeeder extends Seeder
         Setting::set('footer_about_text', 'Digihub Innovation Center Pvt. Ltd. provides IT, e-commerce, networking, training and printing services in Nepal.', 'footer');
         Setting::set('footer_newsletter_heading', 'Stay Updated with Digihub Innovation Center', 'footer');
         Setting::set('footer_newsletter_subtext', 'Occasional updates on our services, offers and technology tips.', 'footer');
+        Setting::set('footer_newsletter_enabled', 'true', 'footer');
         Setting::set('footer_copyright', '© 2026 Digihub Innovation Center Pvt. Ltd. All rights reserved.', 'footer');
 
         // Homepage sections: services, solutions, team, tech stack and the overview blog
