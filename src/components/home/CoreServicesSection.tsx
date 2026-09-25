@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, ChevronRight, CheckCircle2, Code2, Building, Globe, Smartphone, Cpu } from 'lucide-react';
+import { ArrowRight, ChevronRight, CheckCircle2, Code2, BarChart3, Landmark, BookOpen, Users2, Cpu } from 'lucide-react';
 import { Service } from '../../types';
 
 interface Props {
@@ -9,14 +9,16 @@ interface Props {
 
 const getServiceIcon = (name: string) => {
   switch (name) {
-    case 'Custom Software Development':
+    case 'IT, Software & Digital Infrastructure':
       return <Code2 className="w-6 h-6 text-emerald-600" />;
-    case 'Government Software Solutions':
-      return <Building className="w-6 h-6 text-emerald-600" />;
-    case 'Web Application Development':
-      return <Globe className="w-6 h-6 text-emerald-600" />;
-    case 'Mobile Application Development':
-      return <Smartphone className="w-6 h-6 text-emerald-600" />;
+    case 'Research, Survey & Data Management':
+      return <BarChart3 className="w-6 h-6 text-emerald-600" />;
+    case 'Policy, Management & Institutional Consulting':
+      return <Landmark className="w-6 h-6 text-emerald-600" />;
+    case 'Publishing, Digital Content & Communication':
+      return <BookOpen className="w-6 h-6 text-emerald-600" />;
+    case 'Capacity Building, Collaboration & Professional Services':
+      return <Users2 className="w-6 h-6 text-emerald-600" />;
     default:
       return <Cpu className="w-6 h-6 text-emerald-600" />;
   }
@@ -31,10 +33,10 @@ export const CoreServicesSection: React.FC<Props> = ({ services }) => {
             Capabilities
           </div>
           <h2 className="text-3xl font-extrabold text-slate-900 tracking-tight">
-            Core Engineering Services
+            Core Services
           </h2>
           <p className="text-slate-600 text-sm mt-1 max-w-xl">
-            Comprehensive software engineering and technical consulting tailored to institutional requirements.
+            Technology, research, policy consulting, publishing and capacity building tailored to institutional requirements.
           </p>
         </div>
         <Link

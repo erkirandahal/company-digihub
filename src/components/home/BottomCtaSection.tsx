@@ -7,10 +7,10 @@ export const BottomCtaSection: React.FC = () => {
       <div className="bg-indigo-700 text-white rounded-3xl p-10 sm:p-14 relative overflow-hidden">
         <div className="max-w-2xl space-y-4 relative z-10">
           <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight">
-            Ready to architect your digital transformation?
+            Ready to start your next project?
           </h2>
           <p className="text-indigo-100 text-sm leading-relaxed">
-            Consult with our software engineering team to formulate requirements, determine technical viability, and receive a formal project quotation.
+            Talk to our team about your software, research, policy consulting or publishing needs and receive a formal proposal.
           </p>
           <div className="pt-4 flex flex-wrap gap-4 items-center">
             <Link

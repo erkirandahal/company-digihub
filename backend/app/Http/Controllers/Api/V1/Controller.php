@@ -8,7 +8,7 @@ use Illuminate\Http\JsonResponse;
 abstract class Controller extends BaseController
 {
     /**
-     * Standardized success response as required by Digihub API standard.
+     * Standardized success response for the Pragya Innovative API.
      */
     protected function successResponse($data = [], string $message = 'Request successful', int $statusCode = 200, array $meta = []): JsonResponse
     {

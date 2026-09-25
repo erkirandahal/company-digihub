@@ -13,25 +13,25 @@ export const EnterpriseSolutionsSection: React.FC<Props> = ({ solutions }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mb-12">
           <div className="inline-block px-3 py-1 rounded-md text-xs font-bold uppercase tracking-wider text-indigo-700 bg-indigo-100 mb-2">
-            GovTech & Enterprise
+            Solutions
           </div>
           <h2 className="text-3xl font-extrabold text-slate-900 tracking-tight">
-            Pre-Architected Solutions & Platforms
+            Solution Packages
           </h2>
           <p className="text-slate-500 text-sm mt-2">
-            Proven system blueprints engineered to shorten deployment cycles for government bodies, educational networks, and enterprises.
+            Combined software, research and consulting packages tailored to institutional needs.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {solutions.map((sol) => (
+          {solutions.map((sol, index) => (
             <div
               key={sol.id}
               className="bg-white border border-slate-200 rounded-2xl p-6 flex flex-col justify-between shadow-sm hover:border-indigo-300 hover:shadow-md transition-all"
             >
               <div>
                 <span className="text-xs font-semibold text-indigo-700 uppercase tracking-wider">
-                  {sol.status}
+                  Package 0{index + 1}
                 </span>
                 <h3 className="text-xl font-bold text-slate-900 mt-1 mb-3">
                   {sol.title}
@@ -58,7 +58,7 @@ export const EnterpriseSolutionsSection: React.FC<Props> = ({ solutions }) => {
                   to={`/solutions`}
                   className="text-xs font-semibold text-indigo-700 hover:text-indigo-800 flex items-center gap-1"
                 >
-                  <span>Explore Architecture</span>
+                  <span>Learn More</span>
                   <ArrowRight className="w-3.5 h-3.5" />
                 </Link>
               </div>

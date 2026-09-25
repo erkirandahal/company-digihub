@@ -7,9 +7,9 @@ import { usePageMeta } from '../../hooks/usePageMeta';
 
 export const TeamPage: React.FC = () => {
   usePageMeta({
-    title: 'Our Team | Digihub Innovation Center',
+    title: 'Our Team | Pragya Innovative Pvt. Ltd.',
     description:
-      'Meet the engineers and leadership behind Digihub Innovation Center — a team with deep experience in full-stack architecture, spatial GIS systems, and municipal governance portals.',
+      'Meet the leadership behind Pragya Innovative Pvt. Ltd. — bringing together technology, research and policy consulting expertise.',
   });
   const [team, setTeam] = useState<TeamMember[]>([]);
 

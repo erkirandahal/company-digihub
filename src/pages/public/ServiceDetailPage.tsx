@@ -11,7 +11,7 @@ export const ServiceDetailPage: React.FC = () => {
   const [loading, setLoading] = useState(true);
 
   usePageMeta({
-    title: service ? `${service.name} | Digihub Innovation Center` : undefined,
+    title: service ? `${service.name} | Pragya Innovative Pvt. Ltd.` : undefined,
     description: service?.short_description,
     image: service?.image ? getStorageUrl(service.image) : undefined,
   });

@@ -7,9 +7,9 @@ import { usePageMeta } from '../../hooks/usePageMeta';
 
 export const CareersPage: React.FC = () => {
   usePageMeta({
-    title: 'Careers & Open Roles | Digihub Innovation Center',
+    title: 'Careers & Open Roles | Pragya Innovative Pvt. Ltd.',
     description:
-      'Join our engineering team building enterprise software, e-governance platforms, and API-first architectures in Nepal.',
+      'Join Pragya Innovative and work across technology, research, policy consulting and publishing in Nepal.',
   });
   const [careers, setCareers] = useState<Career[]>([]);
   const [loading, setLoading] = useState(true);
@@ -31,10 +31,10 @@ export const CareersPage: React.FC = () => {
               Work With Us
             </span>
             <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight">
-              Careers at Digihub Innovation Center
+              Careers at Pragya Innovative Pvt. Ltd.
             </h1>
             <p className="text-slate-600 text-base leading-relaxed">
-              Join an engineering team focused on creating impactful digital platforms, high-performance APIs, and institutional software in Nepal.
+              Join a team working across technology, research, policy consulting, publishing and capacity building in Nepal.
             </p>
           </div>
         </div>
@@ -44,30 +44,30 @@ export const CareersPage: React.FC = () => {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           <div className="p-6 rounded-2xl bg-white border border-slate-200 shadow-xs space-y-2">
-            <h4 className="font-bold text-slate-900 text-base">Architectural Rigor</h4>
+            <h4 className="font-bold text-slate-900 text-base">Multi-Disciplinary Work</h4>
             <p className="text-slate-600 text-xs leading-relaxed">
-              We design software according to sound relational principles, clean domain layers, and audited security.
+              Work across software, research, policy consulting and publishing engagements.
             </p>
           </div>
 
           <div className="p-6 rounded-2xl bg-white border border-slate-200 shadow-xs space-y-2">
             <h4 className="font-bold text-slate-900 text-base">Continuous Learning</h4>
             <p className="text-slate-600 text-xs leading-relaxed">
-              Dedicated time for technology spikes, open source contribution, and conference participation.
+              Opportunities for professional development, training and capacity building.
             </p>
           </div>
 
           <div className="p-6 rounded-2xl bg-white border border-slate-200 shadow-xs space-y-2">
-            <h4 className="font-bold text-slate-900 text-base">Flexible Culture</h4>
+            <h4 className="font-bold text-slate-900 text-base">Kathmandu-Based Team</h4>
             <p className="text-slate-600 text-xs leading-relaxed">
-              Hybrid working arrangements with modern workstations in Putalisadak, Kathmandu.
+              Based in Bijuli Bazar, Kathmandu, working with clients across Nepal.
             </p>
           </div>
 
           <div className="p-6 rounded-2xl bg-white border border-slate-200 shadow-xs space-y-2">
             <h4 className="font-bold text-slate-900 text-base">Real Public Impact</h4>
             <p className="text-slate-600 text-xs leading-relaxed">
-              Build e-governance systems used by tens of thousands of citizens every single day.
+              Contribute to research, policy and technology work that supports institutions across Nepal.
             </p>
           </div>
         </div>

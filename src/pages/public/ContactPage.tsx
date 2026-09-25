@@ -6,9 +6,9 @@ import { usePageMeta } from '../../hooks/usePageMeta';
 
 export const ContactPage: React.FC = () => {
   usePageMeta({
-    title: 'Contact Us | Digihub Innovation Center',
+    title: 'Contact Us | Pragya Innovative Pvt. Ltd.',
     description:
-      'Have an enterprise project or government system requirement? Reach our engineering team for scoping sessions and technical advisory.',
+      'Reach out to Pragya Innovative for software, research, policy consulting or publishing inquiries.',
   });
   const {
     maps_lat,
@@ -27,7 +27,7 @@ export const ContactPage: React.FC = () => {
     phone: '',
     company: '',
     subject: '',
-    service_interested_in: 'Custom Software Development',
+    service_interested_in: 'IT, Software & Digital Infrastructure',
     budget_range: '$5,000 - $15,000',
     preferred_contact_method: 'Email',
     message: '',
@@ -51,7 +51,7 @@ export const ContactPage: React.FC = () => {
         phone: '',
         company: '',
         subject: '',
-        service_interested_in: 'Custom Software Development',
+        service_interested_in: 'IT, Software & Digital Infrastructure',
         budget_range: '$5,000 - $15,000',
         preferred_contact_method: 'Email',
         message: '',
@@ -73,10 +73,10 @@ export const ContactPage: React.FC = () => {
               Get In Touch
             </span>
             <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight">
-              Contact Digihub Innovation Center
+              Contact Pragya Innovative Pvt. Ltd.
             </h1>
             <p className="text-slate-600 text-base leading-relaxed">
-              Have an enterprise project or government system requirement? Reach our engineering team in Kathmandu for scoping sessions and technical advisory.
+              Have a software, research, policy consulting or publishing requirement? Reach our team in Kathmandu to discuss your needs.
             </p>
           </div>
         </div>
@@ -92,7 +92,7 @@ export const ContactPage: React.FC = () => {
                 Corporate Headquarters
               </h2>
               <p className="text-slate-600 text-sm leading-relaxed">
-                {site_name || 'Digihub Innovation Center'} operates out of {address || 'our headquarters'}.
+                {site_name || 'Pragya Innovative Pvt. Ltd.'} operates out of {address || 'our headquarters'}.
               </p>
             </div>
 
@@ -145,7 +145,7 @@ export const ContactPage: React.FC = () => {
             {(maps_embed_url || (maps_lat && maps_lng)) && (
               <div className="rounded-2xl overflow-hidden border border-slate-200 h-64">
                 <iframe
-                  title="Digihub Innovation Center office location"
+                  title="Pragya Innovative Pvt. Ltd. office location"
                   src={maps_embed_url || `https://www.google.com/maps?q=${maps_lat},${maps_lng}&output=embed`}
                   className="w-full h-full"
                   loading="lazy"
@@ -250,11 +250,11 @@ export const ContactPage: React.FC = () => {
                         onChange={(e) => setFormData({ ...formData, service_interested_in: e.target.value })}
                         className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-300 rounded-xl focus:outline-none focus:border-emerald-500 text-xs"
                       >
-                        <option>Custom Software Development</option>
-                        <option>Government Software Solutions</option>
-                        <option>Web Application Development</option>
-                        <option>Mobile Application Development</option>
-                        <option>Digital Transformation Consulting</option>
+                        <option>IT, Software & Digital Infrastructure</option>
+                        <option>Research, Survey & Data Management</option>
+                        <option>Policy, Management & Institutional Consulting</option>
+                        <option>Publishing, Digital Content & Communication</option>
+                        <option>Capacity Building, Collaboration & Professional Services</option>
                         <option>Other Special Request</option>
                       </select>
                     </div>

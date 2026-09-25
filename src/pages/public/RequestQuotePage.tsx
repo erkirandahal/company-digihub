@@ -6,9 +6,9 @@ import { usePageMeta } from '../../hooks/usePageMeta';
 
 export const RequestQuotePage: React.FC = () => {
   usePageMeta({
-    title: 'Request a Project Proposal | Digihub Innovation Center',
+    title: 'Request a Proposal | Pragya Innovative Pvt. Ltd.',
     description:
-      'Tell us about your technical requirements and get a tailored proposal from our solutions architects.',
+      'Tell us about your project and get a tailored proposal from Pragya Innovative Pvt. Ltd.',
   });
   const [searchParams] = useSearchParams();
   const preselectedService = searchParams.get('service') || '';
@@ -21,7 +21,7 @@ export const RequestQuotePage: React.FC = () => {
     phone: '',
     project_title: '',
     project_description: '',
-    required_services: preselectedService ? [preselectedService] : ['Custom Software Development'],
+    required_services: preselectedService ? [preselectedService] : ['IT, Software & Digital Infrastructure'],
     estimated_budget: '$10,000 - $25,000',
     timeline: '3 - 6 Months',
     preferred_contact_method: 'Email',
@@ -32,14 +32,11 @@ export const RequestQuotePage: React.FC = () => {
   const [error, setError] = useState('');
 
   const servicesList = [
-    'Custom Software Development',
-    'Government Software Solutions',
-    'Web Application Development',
-    'Mobile Application Development',
-    'GIS Land & Asset Mapping',
-    'Citizen e-Services Portal',
-    'Legacy System Modernization',
-    'IT Architecture Advisory',
+    'IT, Software & Digital Infrastructure',
+    'Research, Survey & Data Management',
+    'Policy, Management & Institutional Consulting',
+    'Publishing, Digital Content & Communication',
+    'Capacity Building, Collaboration & Professional Services',
   ];
 
   const toggleService = (serv: string) => {
@@ -76,10 +73,10 @@ export const RequestQuotePage: React.FC = () => {
             Project Scoping Portal
           </span>
           <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-slate-900">
-            Request an Enterprise Proposal
+            Request a Proposal
           </h1>
           <p className="text-slate-600 text-base max-w-2xl mx-auto leading-relaxed">
-            Outline your system parameters to receive a technical feasibility analysis, architectural roadmap, and financial quotation.
+            Outline your project so we can prepare a tailored proposal and quotation.
           </p>
         </div>
       </section>
@@ -134,7 +131,7 @@ export const RequestQuotePage: React.FC = () => {
                 Project Proposal Registered!
               </h3>
               <p className="text-slate-600 text-sm max-w-lg mx-auto leading-relaxed">
-                Thank you, <span className="font-semibold">{formData.name}</span>. Your requirements have been channeled directly to our lead software architects. We will examine the scope and arrange a discovery session within 24 hours.
+                Thank you, <span className="font-semibold">{formData.name}</span>. Your requirements have been sent to our team. We will review the scope and get in touch within 24 hours.
               </p>
               <div className="pt-6">
                 <Link
@@ -152,10 +149,10 @@ export const RequestQuotePage: React.FC = () => {
                 <div className="space-y-6">
                   <div>
                     <h3 className="text-lg font-bold text-slate-900">
-                      Select Required Technical Capabilities
+                      Select Required Services
                     </h3>
                     <p className="text-xs text-slate-500 mt-0.5">
-                      Choose one or more capabilities your project entails.
+                      Choose one or more services your project entails.
                     </p>
                   </div>
 
@@ -306,7 +303,7 @@ export const RequestQuotePage: React.FC = () => {
                       Organization & Stakeholder Details
                     </h3>
                     <p className="text-xs text-slate-500 mt-0.5">
-                      Where should our software engineering directors send the proposal?
+                      Where should we send the proposal?
                     </p>
                   </div>
 

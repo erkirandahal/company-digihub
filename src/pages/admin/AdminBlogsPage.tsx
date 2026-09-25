@@ -190,7 +190,7 @@ export const AdminBlogsPage: React.FC = () => {
                       </div>
                     </div>
                   </td>
-                  <td className="py-4 px-4 text-slate-600">{b.author?.name || 'Digihub Architect'}</td>
+                  <td className="py-4 px-4 text-slate-600">{b.author?.name || 'Editor'}</td>
                   <td className="py-4 px-4 text-slate-600">
                     <div className="flex items-center gap-1">
                       <Eye className="w-3.5 h-3.5 text-slate-400" />

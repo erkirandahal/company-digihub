@@ -1,4 +1,4 @@
-# LOCAL DEVELOPMENT GUIDE — DIGIHUB INNOVATION CENTER
+# LOCAL DEVELOPMENT GUIDE — PRAGYA INNOVATIVE
 
 This guide explains how to run the project locally after downloading or cloning from GitHub into VS Code.
 
@@ -23,7 +23,7 @@ cp .env.example .env
 php artisan key:generate
 
 # Configure MySQL credentials in .env:
-# DB_DATABASE=digihub_db
+# DB_DATABASE=pragyainnovative_db
 # DB_USERNAME=root
 # DB_PASSWORD=your_password
 
@@ -39,7 +39,7 @@ php artisan serve --port=8000
 Laravel API will be active at: `http://127.0.0.1:8000`
 
 Default seeded administrative account:
-- Email: `admin@digihub.com.np`
+- Email: `admin@pragyainnovative.com.np`
 - Password: `password123`
 
 ## 2. Frontend Setup (React + Vite)

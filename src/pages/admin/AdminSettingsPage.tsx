@@ -17,21 +17,21 @@ interface EmbedItem {
 export const AdminSettingsPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'settings' | 'audit'>('settings');
   const [settings, setSettings] = useState<Record<string, any>>({
-    site_name: 'Digihub Innovation Center',
-    tagline: 'Leading Software Development & Digital Transformation in Nepal',
-    contact_email: 'info@digihub.com.np',
-    support_email: 'support@digihub.com.np',
-    phone: '+977-1-4567890',
-    mobile: '+977-9801234567',
-    address: 'Putalisadak, Kathmandu, Bagmati Province, Nepal',
-    pan_vat_number: '609876543',
-    meta_title: 'Digihub Innovation Center | Enterprise Software & Public Systems',
+    site_name: 'Pragya Innovative Pvt. Ltd.',
+    tagline: 'Innovation, Research & Technology for a Better Tomorrow',
+    contact_email: 'info@pragyainnovative.com.np',
+    support_email: '',
+    phone: '+977-1-XXXXXXX',
+    mobile: '',
+    address: 'Bijuli Bazar, Kathmandu Metropolitan City Ward No. 10, Kathmandu, Nepal',
+    pan_vat_number: '',
+    meta_title: 'Pragya Innovative Pvt. Ltd. | IT, Research & Consulting in Nepal',
     meta_description:
-      'Pioneering software engineering, municipal GIS platforms, and mission-critical public infrastructure in Kathmandu, Nepal.',
-    footer_about_text: '',
-    footer_newsletter_heading: 'Subscribe to Digihub Tech Insights',
+      'Pragya Innovative is a Kathmandu-based company providing software & digital solutions, research and data management, policy and institutional consulting, publishing, and capacity-building services.',
+    footer_about_text: 'Pragya Innovative Pvt. Ltd. provides IT, research, policy consulting, publishing and capacity-building services in Nepal.',
+    footer_newsletter_heading: 'Stay Updated with Pragya Innovative',
     footer_newsletter_subtext:
-      'Receive quarterly technical briefs on enterprise architecture, government information systems, and API design.',
+      'Occasional updates on our research, publications and services.',
   });
 
   const [auditLogs, setAuditLogs] = useState<AuditLog[]>([]);

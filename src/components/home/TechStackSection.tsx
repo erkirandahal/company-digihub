@@ -6,7 +6,7 @@ interface Props {
   technologies: Technology[];
 }
 
-const techCategories = ['All', 'Backend', 'Frontend', 'Database', 'Cloud & DevOps'];
+const techCategories = ['All', 'Backend', 'Frontend', 'Database', 'Cloud & DevOps', 'AI'];
 
 export const TechStackSection: React.FC<Props> = ({ technologies }) => {
   const [activeTechCategory, setActiveTechCategory] = useState<string>('All');

@@ -12,7 +12,7 @@ export const BlogDetailPage: React.FC = () => {
   const [loading, setLoading] = useState(true);
 
   usePageMeta({
-    title: blog ? `${blog.title} | Digihub Innovation Center` : undefined,
+    title: blog ? `${blog.title} | Pragya Innovative Pvt. Ltd.` : undefined,
     description: blog?.excerpt,
     image: blog?.featured_image ? getStorageUrl(blog.featured_image) : undefined,
   });
@@ -79,11 +79,11 @@ export const BlogDetailPage: React.FC = () => {
 
             <div className="pt-2 flex items-center gap-3">
               <div className="w-10 h-10 rounded-full bg-indigo-700 text-white flex items-center justify-center font-bold text-sm">
-                {blog.author?.name ? blog.author.name[0] : 'D'}
+                {blog.author?.name ? blog.author.name[0] : 'P'}
               </div>
               <div>
-                <p className="text-sm font-bold text-slate-900">{blog.author?.name || 'Digihub Architect'}</p>
-                <p className="text-xs text-slate-500">Software Engineering Group</p>
+                <p className="text-sm font-bold text-slate-900">{blog.author?.name || 'Pragya Innovative'}</p>
+                <p className="text-xs text-slate-500">Editorial Team</p>
               </div>
             </div>
           </div>

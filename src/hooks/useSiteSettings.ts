@@ -21,7 +21,7 @@ export interface SiteSettings {
   [key: string]: any;
 }
 
-const CACHE_KEY = 'digihub_public_settings_cache_v1';
+const CACHE_KEY = 'pragya_public_settings_cache_v1';
 
 function readCache(): SiteSettings | null {
   try {

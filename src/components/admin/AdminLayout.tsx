@@ -68,7 +68,7 @@ export const AdminLayout: React.FC = () => {
               </div>
               <div>
                 <h1 className="font-black text-indigo-700 text-sm tracking-tight leading-tight">
-                  DIGIHUB ADMIN
+                  PRAGYA ADMIN
                 </h1>
                 <span className="text-[10px] text-slate-400 font-semibold tracking-wider uppercase block">
                   CMS & CRM Platform
@@ -134,7 +134,7 @@ export const AdminLayout: React.FC = () => {
       <main className="flex-1 flex flex-col min-w-0 overflow-y-auto">
         <header className="bg-white border-b border-slate-200 px-8 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2 text-xs text-slate-500">
-            <span>Digihub Innovation Center</span>
+            <span>Pragya Innovative</span>
             <span>/</span>
             <span className="font-semibold text-slate-800 capitalize">
               {location.pathname.replace('/admin', '') || 'Dashboard'}

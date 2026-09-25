@@ -11,7 +11,7 @@ export const ProjectDetailPage: React.FC = () => {
   const [loading, setLoading] = useState(true);
 
   usePageMeta({
-    title: project ? `${project.title} | Digihub Innovation Center` : undefined,
+    title: project ? `${project.title} | Pragya Innovative Pvt. Ltd.` : undefined,
     description: project?.short_description,
     image: project?.featured_image ? getStorageUrl(project.featured_image) : undefined,
   });
@@ -124,7 +124,7 @@ export const ProjectDetailPage: React.FC = () => {
               <div className="bg-emerald-50/50 border border-emerald-100 rounded-2xl p-6 space-y-2">
                 <h3 className="text-lg font-bold text-emerald-950 flex items-center gap-2">
                   <Lightbulb className="w-5 h-5 text-emerald-600" />
-                  <span>Digihub Engineering Solutions</span>
+                  <span>Our Approach</span>
                 </h3>
                 <p className="text-emerald-900/80 text-sm leading-relaxed">
                   {project.solutions}

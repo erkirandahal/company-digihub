@@ -14,10 +14,10 @@ export const LatestBlogSection: React.FC<Props> = ({ blogs }) => {
       <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
         <div>
           <div className="inline-block px-3 py-1 rounded-md text-xs font-bold uppercase tracking-wider text-emerald-800 bg-emerald-100 mb-2">
-            Engineering Insights
+            Insights
           </div>
           <h2 className="text-3xl font-extrabold text-slate-900 tracking-tight">
-            Latest Technical Briefs
+            Latest from Pragya Innovative
           </h2>
         </div>
         <Link

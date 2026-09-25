@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { CheckCircle2, ChevronRight, Code2, Building, Globe, Smartphone, Cpu, ArrowRight } from 'lucide-react';
+import { CheckCircle2, ChevronRight, Code2, BarChart3, Landmark, BookOpen, Users2, Cpu, ArrowRight } from 'lucide-react';
 import { servicesApi, getStorageUrl } from '../../services/api';
 import { Service } from '../../types';
 import { usePageMeta } from '../../hooks/usePageMeta';
 
 export const ServicesPage: React.FC = () => {
   usePageMeta({
-    title: 'Enterprise Software & Consulting Services | Digihub Innovation Center',
+    title: 'Our Services | Pragya Innovative Pvt. Ltd.',
     description:
-      'Full-lifecycle software engineering from initial system architecture to continuous SLA maintenance for public institutions and growing enterprises.',
+      'Software & digital solutions, research and data management, policy and institutional consulting, publishing, and capacity-building services in Nepal.',
   });
   const [services, setServices] = useState<Service[]>([]);
   const [loading, setLoading] = useState(true);
@@ -23,14 +23,16 @@ export const ServicesPage: React.FC = () => {
 
   const getServiceIcon = (name: string) => {
     switch (name) {
-      case 'Custom Software Development':
+      case 'IT, Software & Digital Infrastructure':
         return <Code2 className="w-6 h-6 text-emerald-600" />;
-      case 'Government Software Solutions':
-        return <Building className="w-6 h-6 text-emerald-600" />;
-      case 'Web Application Development':
-        return <Globe className="w-6 h-6 text-emerald-600" />;
-      case 'Mobile Application Development':
-        return <Smartphone className="w-6 h-6 text-emerald-600" />;
+      case 'Research, Survey & Data Management':
+        return <BarChart3 className="w-6 h-6 text-emerald-600" />;
+      case 'Policy, Management & Institutional Consulting':
+        return <Landmark className="w-6 h-6 text-emerald-600" />;
+      case 'Publishing, Digital Content & Communication':
+        return <BookOpen className="w-6 h-6 text-emerald-600" />;
+      case 'Capacity Building, Collaboration & Professional Services':
+        return <Users2 className="w-6 h-6 text-emerald-600" />;
       default:
         return <Cpu className="w-6 h-6 text-emerald-600" />;
     }
@@ -46,10 +48,10 @@ export const ServicesPage: React.FC = () => {
               Our Capabilities
             </span>
             <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight">
-              Enterprise Software & Consulting Services
+              Our Services
             </h1>
             <p className="text-slate-600 text-base leading-relaxed">
-              We provide full-lifecycle software engineering from initial system architecture to continuous SLA maintenance for public institutions and growing enterprises.
+              Software & digital solutions, research and data management, policy and institutional consulting, publishing, and capacity-building services for institutions across Nepal.
             </p>
           </div>
         </div>

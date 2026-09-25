@@ -53,7 +53,7 @@ class LeadController extends Controller
             'description' => 'Lead created via online Project Request form.',
         ]);
 
-        return $this->successResponse($lead, 'Your project request has been submitted successfully. A Digihub architect will prepare a formal proposal.', 201);
+        return $this->successResponse($lead, 'Your project request has been submitted successfully. Our team will prepare a formal proposal.', 201);
     }
 
     public function update(Request $request, int $id)

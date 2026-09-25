@@ -13,7 +13,7 @@ export const ActivePopup: React.FC = () => {
     let timer: NodeJS.Timeout;
     const fetchActivePopup = async () => {
       const pageKey = location.pathname === '/' ? 'home' : location.pathname.replace('/', '');
-      const dismissed = sessionStorage.getItem(`digihub_popup_dismissed_${pageKey}`);
+      const dismissed = sessionStorage.getItem(`pragya_popup_dismissed_${pageKey}`);
       if (dismissed) return;
 
       const res = await popupsApi.getActive(pageKey);
@@ -39,7 +39,7 @@ export const ActivePopup: React.FC = () => {
     setIsVisible(false);
     if (popup) {
       const pageKey = location.pathname === '/' ? 'home' : location.pathname.replace('/', '');
-      sessionStorage.setItem(`digihub_popup_dismissed_${pageKey}`, 'true');
+      sessionStorage.setItem(`pragya_popup_dismissed_${pageKey}`, 'true');
     }
   };
 

@@ -9,10 +9,10 @@ export const WhyChooseProcessSection: React.FC = () => {
             Our Methodology
           </div>
           <h2 className="text-3xl font-extrabold text-slate-900 tracking-tight">
-            A Disciplined 4-Stage Software Lifecycle
+            A Disciplined, Evidence-Based Approach
           </h2>
           <p className="text-slate-600 text-sm mt-1">
-            Eliminating ambiguity and technical debt through rigorous specification and phased delivery.
+            From scoping to delivery, every engagement follows a consistent, quality-driven process.
           </p>
         </div>
 
@@ -20,40 +20,40 @@ export const WhyChooseProcessSection: React.FC = () => {
           <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs relative">
             <span className="text-3xl font-black text-slate-200">01</span>
             <h4 className="text-base font-bold text-slate-900 mt-2 mb-1">
-              Architecture Discovery
+              Scoping & Requirement Analysis
             </h4>
             <p className="text-slate-600 text-xs leading-relaxed">
-              Analyzing business logic, defining security policies, and constructing data flow diagrams.
+              Understanding objectives, stakeholders and technical or research requirements in detail.
             </p>
           </div>
 
           <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs relative">
             <span className="text-3xl font-black text-slate-200">02</span>
             <h4 className="text-base font-bold text-slate-900 mt-2 mb-1">
-              Relational Design
+              Design & Development
             </h4>
             <p className="text-slate-600 text-xs leading-relaxed">
-              Drafting normalized MySQL migrations, seeders, and RESTful API endpoints.
+              Building software, research instruments, policy drafts or content plans against agreed specifications.
             </p>
           </div>
 
           <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs relative">
             <span className="text-3xl font-black text-slate-200">03</span>
             <h4 className="text-base font-bold text-slate-900 mt-2 mb-1">
-              Iterative Development
+              Quality Review & Consultation
             </h4>
             <p className="text-slate-600 text-xs leading-relaxed">
-              Building reactive, accessible React components backed by Laravel API controllers and Form Requests.
+              Verifying outputs with clients and stakeholders through structured review cycles.
             </p>
           </div>
 
           <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs relative">
             <span className="text-3xl font-black text-slate-200">04</span>
             <h4 className="text-base font-bold text-slate-900 mt-2 mb-1">
-              Deployment & SLA
+              Delivery & Ongoing Support
             </h4>
             <p className="text-slate-600 text-xs leading-relaxed">
-              cPanel or Cloud Run deployment, SSL setup, scheduler automation, and capacity training.
+              Final handover, publication or deployment, with continued support as needed.
             </p>
           </div>
         </div>

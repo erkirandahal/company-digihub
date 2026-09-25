@@ -7,9 +7,9 @@ import { usePageMeta } from '../../hooks/usePageMeta';
 
 export const BlogPage: React.FC = () => {
   usePageMeta({
-    title: 'Digihub Tech Insights & Case Studies | Engineering Blog',
+    title: 'Blog & Insights | Pragya Innovative Pvt. Ltd.',
     description:
-      'Architectural guides, e-governance implementation patterns, and enterprise software tutorials authored by our lead developers.',
+      'Articles, research notes and updates from Pragya Innovative on technology, research, policy and publishing.',
   });
   const [blogs, setBlogs] = useState<Blog[]>([]);
   const [searchTerm, setSearchTerm] = useState('');
@@ -31,8 +31,6 @@ export const BlogPage: React.FC = () => {
 
   const categories = [
     { slug: 'all', name: 'All Insights' },
-    { slug: 'govtech', name: 'GovTech & e-Governance' },
-    { slug: 'tech', name: 'Technology Insights' },
   ];
 
   return (
@@ -42,13 +40,13 @@ export const BlogPage: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl space-y-4">
             <span className="text-indigo-700 font-bold text-xs uppercase tracking-wider">
-              Engineering Knowledge Base
+              Knowledge Base
             </span>
             <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight">
-              Digihub Tech Insights & Case Studies
+              Blog & Insights
             </h1>
             <p className="text-slate-600 text-base leading-relaxed">
-              Architectural guides, e-governance implementation patterns, and enterprise software tutorials authored by our lead developers.
+              Articles, research notes and updates from Pragya Innovative on technology, research, policy and publishing.
             </p>
           </div>
         </div>
@@ -77,7 +75,7 @@ export const BlogPage: React.FC = () => {
             <Search className="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2" />
             <input
               type="text"
-              placeholder="Search architecture briefs..."
+              placeholder="Search articles..."
               value={searchTerm}
               onChange={(e) => { setSearchTerm(e.target.value); setPage(1); }}
               className="w-full pl-9 pr-4 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs focus:outline-none focus:border-emerald-500"

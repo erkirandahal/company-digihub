@@ -59,11 +59,11 @@ export const Footer: React.FC = () => {
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
             <h3 className="text-xl font-bold text-slate-900 mb-1">
-              {footer_newsletter_heading || 'Subscribe to Digihub Tech Insights'}
+              {footer_newsletter_heading || 'Stay Updated with Pragya Innovative'}
             </h3>
             <p className="text-slate-500 text-sm max-w-xl">
               {footer_newsletter_subtext ||
-                'Receive quarterly technical briefs on enterprise architecture, government information systems, and API design.'}
+                'Occasional updates on our research, publications and services.'}
             </p>
           </div>
           <div className="w-full md:w-auto">
@@ -124,8 +124,8 @@ export const Footer: React.FC = () => {
             <p className="text-slate-500 text-sm leading-relaxed max-w-sm">
               {footer_about_text ||
                 (site_name
-                  ? `${site_name} is a premier software engineering company delivering enterprise software, e-governance platforms, GIS applications, and API-first architectures.`
-                  : 'A premier software engineering company delivering enterprise software, e-governance platforms, GIS applications, and API-first architectures.')}
+                  ? `${site_name} provides IT, research, policy consulting, publishing and capacity-building services in Nepal.`
+                  : 'Providing IT, research, policy consulting, publishing and capacity-building services in Nepal.')}
             </p>
             <div className="space-y-2 pt-2 text-xs text-slate-500">
               {address && (
@@ -176,86 +176,76 @@ export const Footer: React.FC = () => {
             </h4>
             <ul className="space-y-2.5 text-sm">
               <li>
-                <Link to="/services/custom-software-development" className="hover:text-indigo-700 transition-colors">
-                  Custom Software
+                <Link to="/services/it-software-digital-infrastructure" className="hover:text-indigo-700 transition-colors">
+                  IT & Software
                 </Link>
               </li>
               <li>
-                <Link to="/services/government-software-solutions" className="hover:text-indigo-700 transition-colors">
-                  Government Solutions
+                <Link to="/services/research-survey-data-management" className="hover:text-indigo-700 transition-colors">
+                  Research & Data
                 </Link>
               </li>
               <li>
-                <Link to="/services/web-application-development" className="hover:text-indigo-700 transition-colors">
-                  Web Applications
+                <Link to="/services/policy-management-institutional-consulting" className="hover:text-indigo-700 transition-colors">
+                  Policy Consulting
                 </Link>
               </li>
               <li>
-                <Link to="/services/mobile-application-development" className="hover:text-indigo-700 transition-colors">
-                  Mobile Apps
+                <Link to="/services/publishing-digital-content-communication" className="hover:text-indigo-700 transition-colors">
+                  Publishing
                 </Link>
               </li>
               <li>
-                <Link to="/services/digital-transformation-consulting" className="hover:text-indigo-700 transition-colors">
-                  IT Consulting
+                <Link to="/services/capacity-building-collaboration-professional-services" className="hover:text-indigo-700 transition-colors">
+                  Capacity Building
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Column 3: Solutions */}
+          {/* Column 3: Company */}
           <div>
             <h4 className="text-xs font-bold uppercase tracking-wider text-slate-700 mb-4">
-              Solutions
-            </h4>
-            <ul className="space-y-2.5 text-sm">
-              <li>
-                <Link to="/solutions" className="hover:text-indigo-700 transition-colors">
-                  GIS & MIS Systems
-                </Link>
-              </li>
-              <li>
-                <Link to="/solutions" className="hover:text-indigo-700 transition-colors">
-                  Citizen e-Services
-                </Link>
-              </li>
-              <li>
-                <Link to="/solutions" className="hover:text-indigo-700 transition-colors">
-                  Enterprise Workflow
-                </Link>
-              </li>
-              <li>
-                <Link to="/projects" className="hover:text-indigo-700 transition-colors">
-                  Case Studies
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Column 4: Quick Links & Admin */}
-          <div>
-            <h4 className="text-xs font-bold uppercase tracking-wider text-slate-700 mb-4">
-              Organization
+              Company
             </h4>
             <ul className="space-y-2.5 text-sm">
               <li>
                 <Link to="/about" className="hover:text-indigo-700 transition-colors">
-                  About Digihub
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link to="/team" className="hover:text-indigo-700 transition-colors">
+                  Our Team
                 </Link>
               </li>
               <li>
                 <Link to="/careers" className="hover:text-indigo-700 transition-colors">
-                  Careers & Openings
-                </Link>
-              </li>
-              <li>
-                <Link to="/blog" className="hover:text-indigo-700 transition-colors">
-                  Engineering Blog
+                  Careers
                 </Link>
               </li>
               <li>
                 <Link to="/contact" className="hover:text-indigo-700 transition-colors">
                   Contact Us
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Column 4: Resources & Admin */}
+          <div>
+            <h4 className="text-xs font-bold uppercase tracking-wider text-slate-700 mb-4">
+              Resources
+            </h4>
+            <ul className="space-y-2.5 text-sm">
+              <li>
+                <Link to="/blog" className="hover:text-indigo-700 transition-colors">
+                  Blog
+                </Link>
+              </li>
+              <li>
+                <Link to="/request-quote" className="hover:text-indigo-700 transition-colors">
+                  Request a Proposal
                 </Link>
               </li>
               <li>

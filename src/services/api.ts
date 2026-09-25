@@ -64,7 +64,7 @@ export const apiClient = axios.create({
 
 // Attach Authorization Bearer token from localStorage
 apiClient.interceptors.request.use((config) => {
-  const token = localStorage.getItem('digihub_auth_token');
+  const token = localStorage.getItem('pragya_auth_token');
   if (token) {
     config.headers.Authorization = `Bearer ${token}`;
   }
@@ -75,7 +75,7 @@ apiClient.interceptors.request.use((config) => {
 class LocalStorageDataStore {
   private get<T>(key: string, defaultData: T): T {
     try {
-      const item = localStorage.getItem(`digihub_${key}`);
+      const item = localStorage.getItem(`pragya_${key}`);
       return item ? JSON.parse(item) : defaultData;
     } catch {
       return defaultData;
@@ -84,7 +84,7 @@ class LocalStorageDataStore {
 
   private set<T>(key: string, data: T): void {
     try {
-      localStorage.setItem(`digihub_${key}`, JSON.stringify(data));
+      localStorage.setItem(`pragya_${key}`, JSON.stringify(data));
     } catch (e) {
       console.warn('Storage quota reached', e);
     }
@@ -202,25 +202,12 @@ class LocalStorageDataStore {
 
   getAuditLogs(): AuditLog[] {
     return this.get('audit_logs', [
-      { id: 1, action: 'Seeded initial system data', module: 'system', created_at: '2026-03-01 09:00' },
-      { id: 2, action: 'Updated project: Municipal Digital Governance', module: 'projects', record_id: '1', created_at: '2026-03-03 16:30' },
+      { id: 1, action: 'Seeded initial system data', module: 'system', created_at: new Date().toISOString() },
     ]);
   }
 
   getPublications(): Publication[] {
-    return this.get('publications', [
-      {
-        id: 1,
-        title: 'Corporate Capability Statement 2026',
-        slug: 'corporate-capability-2026',
-        description: 'Detailed overview of Digihub software engineering methodologies and institutional project track record.',
-        file_path: 'publications/capability_2026.pdf',
-        type: 'Brochure',
-        is_active: true,
-        published_at: '2026-01-15',
-        created_at: '2026-01-15 10:00',
-      },
-    ]);
+    return this.get('publications', []);
   }
   savePublications(publications: Publication[]) {
     this.set('publications', publications);
@@ -270,35 +257,17 @@ export const authApi = {
     try {
       const res = await apiClient.post('/auth/login', credentials);
       if (res.data.data?.token) {
-        localStorage.setItem('digihub_auth_token', res.data.data.token);
-        localStorage.setItem('digihub_user', JSON.stringify(res.data.data.user));
+        localStorage.setItem('pragya_auth_token', res.data.data.token);
+        localStorage.setItem('pragya_user', JSON.stringify(res.data.data.user));
       }
       return res.data;
-    } catch {
-      // Offline fallback: check seeded admin credentials
-      if (
-        (credentials.email === 'admin@digihub.com.np' && credentials.password === 'password123') ||
-        (credentials.email === 'admin' && credentials.password === 'admin')
-      ) {
-        const user: User = {
-          id: 1,
-          name: 'Digihub Administrator',
-          email: 'admin@digihub.com.np',
-          role: 'Super Admin',
-          role_slug: 'super-admin',
-          is_active: true,
-        };
-        const token = 'sanctum_token_mock_' + Date.now();
-        localStorage.setItem('digihub_auth_token', token);
-        localStorage.setItem('digihub_user', JSON.stringify(user));
-        store.addAuditLog('Admin Logged In', 'auth', '1');
-        return {
-          success: true,
-          message: 'Logged in successfully (Seeded Admin)',
-          data: { user, token },
-        };
+    } catch (error: any) {
+      // Authentication must always be verified by the real backend — never bypass
+      // login locally, even when the API is unreachable.
+      if (error?.response?.data?.message) {
+        throw new Error(error.response.data.message);
       }
-      throw new Error('Invalid email or password. Use: admin@digihub.com.np / password123');
+      throw new Error('Unable to reach the server. Please check your connection and try again.');
     }
   },
 
@@ -306,18 +275,18 @@ export const authApi = {
     try {
       await apiClient.post('/auth/logout');
     } catch {}
-    localStorage.removeItem('digihub_auth_token');
-    localStorage.removeItem('digihub_user');
+    localStorage.removeItem('pragya_auth_token');
+    localStorage.removeItem('pragya_user');
     return { success: true, message: 'Logged out successfully', data: null };
   },
 
   getCurrentUser: (): User | null => {
-    const raw = localStorage.getItem('digihub_user');
+    const raw = localStorage.getItem('pragya_user');
     return raw ? JSON.parse(raw) : null;
   },
 
   isAuthenticated: (): boolean => {
-    return !!localStorage.getItem('digihub_auth_token');
+    return !!localStorage.getItem('pragya_auth_token');
   },
 };
 
@@ -627,7 +596,7 @@ export const blogsApi = {
           status: (formData.get('status') as Blog['status']) || 'published',
           featured: formData.get('featured') === 'true',
           view_count: 0,
-          author: { name: 'Digihub Editor', email: 'editor@digihub.com.np' },
+          author: { name: 'Editor', email: 'info@pragyainnovative.com.np' },
           category: { id: 1, name: 'Technology Insights', slug: 'tech' },
           tags: [{ id: 1, name: 'Architecture', slug: 'architecture' }],
           published_at: new Date().toISOString().slice(0, 10),
