@@ -38,16 +38,16 @@ On your local machine:
 ## 4. Deploying Laravel to cPanel
 In cPanel, standard practice isolates the Laravel application files above `public_html`:
 
-1. In cPanel **File Manager**, create a folder named `digihub/backend` directly in your home root (e.g., `$HOME/digihub/backend`).
-2. Upload the contents of your `backend/` folder (excluding `vendor/` and `.git/`) into `$HOME/digihub/backend`.
+1. In cPanel **File Manager**, create a folder named `digihub-innovation-center/backend` directly in your home root (e.g., `$HOME/digihub-innovation-center/backend`).
+2. Upload the contents of your `backend/` folder (excluding `vendor/` and `.git/`) into `$HOME/digihub-innovation-center/backend`.
 3. Via cPanel Terminal (or SSH):
    ```bash
-   cd $HOME/digihub/backend
+   cd $HOME/digihub-innovation-center/backend
    composer install --no-dev --optimize-autoloader
    cp .env.example .env
    php artisan key:generate
    ```
-4. Edit `$HOME/digihub/backend/.env` with your production settings:
+4. Edit `$HOME/digihub-innovation-center/backend/.env` with your production settings:
    ```env
    APP_NAME="Digihub Innovation Center Pvt. Ltd."
    APP_ENV=production
@@ -79,7 +79,7 @@ In cPanel, standard practice isolates the Laravel application files above `publi
 ## 5. Public Directory Setup (`public_html`)
 1. Move the contents of `backend/public/` (or copy `index.php`, `.htaccess`) to a folder or subpath:
    If your API is served at `https://digihubic.com.np/api/`:
-   Route API requests in `public_html/.htaccess` to `$HOME/digihub/backend/public/index.php`.
+   Route API requests in `public_html/.htaccess` to `$HOME/digihub-innovation-center/backend/public/index.php`.
 2. Place the React `dist/` build files directly into `public_html/`.
 3. Add the following SPA fallback in `public_html/.htaccess`:
    ```apache
@@ -106,7 +106,7 @@ In cPanel, standard practice isolates the Laravel application files above `publi
 ## 6. Cron Job Setup (Laravel Scheduler)
 In cPanel **Cron Jobs**, add a job to run every minute:
 ```bash
-* * * * * cd $HOME/digihub/backend && php artisan schedule:run >> /dev/null 2>&1
+* * * * * cd $HOME/digihub-innovation-center/backend && php artisan schedule:run >> /dev/null 2>&1
 ```
 
 ---

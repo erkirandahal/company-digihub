@@ -1,4 +1,4 @@
 ---
 deployment:
   tasks:
-    - /bin/bash $HOME/digihub/deploy.sh
+    - /bin/bash $HOME/digihub-innovation-center/deploy.sh

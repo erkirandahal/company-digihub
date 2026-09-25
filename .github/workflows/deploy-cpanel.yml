@@ -13,7 +13,7 @@ jobs:
         run: |
           curl -sS --fail-with-body \
             -H "Authorization: cpanel ${{ secrets.CPANEL_USER }}:${{ secrets.CPANEL_TOKEN }}" \
-            "https://${{ secrets.CPANEL_HOST }}:2083/execute/VersionControl/update?repository_root=/home/${{ secrets.CPANEL_USER }}/digihub&branch=main" \
+            "https://${{ secrets.CPANEL_HOST }}:2083/execute/VersionControl/update?repository_root=/home/${{ secrets.CPANEL_USER }}/digihub-innovation-center&branch=main" \
             | tee update.json
           jq -e '.status == 1' update.json
 
@@ -21,6 +21,6 @@ jobs:
         run: |
           curl -sS --fail-with-body \
             -H "Authorization: cpanel ${{ secrets.CPANEL_USER }}:${{ secrets.CPANEL_TOKEN }}" \
-            "https://${{ secrets.CPANEL_HOST }}:2083/execute/VersionControlDeployment/create?repository_root=/home/${{ secrets.CPANEL_USER }}/digihub" \
+            "https://${{ secrets.CPANEL_HOST }}:2083/execute/VersionControlDeployment/create?repository_root=/home/${{ secrets.CPANEL_USER }}/digihub-innovation-center" \
             | tee deploy.json
           jq -e '.status == 1' deploy.json
