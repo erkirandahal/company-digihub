@@ -11,7 +11,7 @@ export const Navbar: React.FC = () => {
   const [openMobileSubmenu, setOpenMobileSubmenu] = useState<string | null>(null);
   const location = useLocation();
   const currentUser = authApi.getCurrentUser();
-  const { site_name, site_logo_url, address, phone, nav_menu_items } = useSiteSettings();
+  const { site_name, site_logo_url, tagline, address, phone, nav_menu_items } = useSiteSettings();
   const phoneHref = phone ? `tel:${phone.replace(/[^+\d]/g, '')}` : undefined;
 
   const navLinks: NavMenuItem[] = parseNavMenuItems(nav_menu_items)
@@ -66,25 +66,37 @@ export const Navbar: React.FC = () => {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-18 items-center">
           {/* Brand Logo */}
-          <Link to="/" className="flex items-center gap-3 group">
+          <Link to="/" className="flex items-center gap-3 group min-w-0">
             {site_logo_url ? (
-              <img src={getStorageUrl(site_logo_url)} alt={site_name || 'Site logo'} className="h-10 w-auto" />
+              <img
+                src={getStorageUrl(site_logo_url)}
+                alt={site_name || 'Site logo'}
+                className="h-10 w-auto shrink-0"
+              />
             ) : site_name ? (
-              <>
-                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-500 to-indigo-700 flex items-center justify-center text-white font-black text-xl shadow-sm group-hover:from-indigo-400 group-hover:to-indigo-600 transition-colors">
-                  <Code2 className="w-6 h-6" />
-                </div>
-                <span className="text-xl font-black tracking-tight text-slate-900 block leading-tight">
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-500 to-indigo-700 flex items-center justify-center text-white font-black text-xl shadow-sm shrink-0 group-hover:from-indigo-400 group-hover:to-indigo-600 transition-colors">
+                <Code2 className="w-6 h-6" />
+              </div>
+            ) : null}
+
+            {site_name ? (
+              <span className="flex flex-col leading-tight min-w-0">
+                <span className="text-lg sm:text-xl font-black tracking-tight text-slate-900 truncate">
                   {site_name}
                 </span>
-              </>
+                {tagline && (
+                  <span className="hidden sm:block text-[11px] font-semibold text-indigo-600 tracking-wide truncate">
+                    {tagline}
+                  </span>
+                )}
+              </span>
             ) : (
               // Real site identity hasn't loaded yet (and no cached copy exists) —
               // show a neutral loading placeholder rather than any fallback name.
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-slate-100 animate-pulse" />
-                <div className="w-28 h-5 rounded bg-slate-100 animate-pulse" />
-              </div>
+              <span className="flex items-center gap-3">
+                <span className="w-10 h-10 rounded-xl bg-slate-100 animate-pulse block" />
+                <span className="w-28 h-5 rounded bg-slate-100 animate-pulse block" />
+              </span>
             )}
           </Link>
 
