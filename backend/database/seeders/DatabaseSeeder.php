@@ -280,6 +280,7 @@ class DatabaseSeeder extends Seeder
         // 8. Site Settings — keys match what the React frontend actually reads
         // (see src/hooks/useSiteSettings.ts, Footer.tsx, Navbar.tsx, ContactPage.tsx, AdminSettingsPage.tsx)
         Setting::set('site_name', 'Digihub Innovation Center Pvt. Ltd.', 'general');
+        Setting::set('header_brand_text_enabled', 'true', 'general');
         Setting::set('tagline', 'Software, Innovation & IT Solutions for a Digital Nepal', 'general');
         Setting::set('company_description', 'Digihub Innovation Center Pvt. Ltd. is a Bhaktapur-based company providing IT consultancy, software and website development, e-commerce solutions, computer networking and hardware, technology training and certification, and printing, branding and stationery services across Nepal.', 'general');
         Setting::set('pan_vat_number', '', 'general');

@@ -253,6 +253,7 @@ export const INITIAL_POPUPS: Popup[] = [
 
 export const INITIAL_SETTINGS: Setting[] = [
   { key: 'site_name', value: 'Digihub Innovation Center Pvt. Ltd.', group: 'general', type: 'text' },
+  { key: 'header_brand_text_enabled', value: 'true', group: 'general', type: 'text' },
   { key: 'tagline', value: 'Software, Innovation & IT Solutions for a Digital Nepal', group: 'general', type: 'text' },
   { key: 'company_description', value: 'Digihub Innovation Center Pvt. Ltd. is a Bhaktapur-based company providing IT consultancy, software and website development, e-commerce solutions, computer networking and hardware, technology training and certification, and printing, branding and stationery services across Nepal.', group: 'general', type: 'textarea' },
   { key: 'pan_vat_number', value: '', group: 'general', type: 'text' },

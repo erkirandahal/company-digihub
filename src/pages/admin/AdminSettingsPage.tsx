@@ -18,6 +18,8 @@ export const AdminSettingsPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'settings' | 'audit'>('settings');
   const [settings, setSettings] = useState<Record<string, any>>({
     site_name: 'Digihub Innovation Center Pvt. Ltd.',
+    header_brand_text_enabled: 'true',
+    header_brand_text: '',
     tagline: 'Software, Innovation & IT Solutions for a Digital Nepal',
     contact_email: 'info@digihubic.com.np',
     support_email: '',
@@ -218,6 +220,34 @@ export const AdminSettingsPage: React.FC = () => {
                   purpose="og_image"
                   shape="wide"
                   hint="Default OG / Social Share Image — 1200x630px"
+                />
+              </div>
+            </div>
+
+            <div className="pt-2 space-y-3">
+              <label className="flex items-center gap-2.5 p-3 rounded-xl bg-slate-50 border border-slate-200 cursor-pointer w-fit">
+                <input
+                  type="checkbox"
+                  checked={settings.header_brand_text_enabled === 'true' || settings.header_brand_text_enabled === '1'}
+                  onChange={(e) =>
+                    setSettings({ ...settings, header_brand_text_enabled: e.target.checked ? 'true' : 'false' })
+                  }
+                  className="w-4 h-4 accent-emerald-600"
+                />
+                <span className="font-bold text-slate-700">Show Company Name Next to Logo in Header</span>
+              </label>
+
+              <div className={settings.header_brand_text_enabled === 'false' ? 'opacity-40 pointer-events-none' : ''}>
+                <label className="font-bold text-slate-700 block mb-1">Header Display Text</label>
+                <p className="text-[11px] text-slate-400 mb-2">
+                  What shows next to the logo. Leave blank to use the Company Legal Name below.
+                </p>
+                <input
+                  type="text"
+                  value={settings.header_brand_text || ''}
+                  onChange={(e) => setSettings({ ...settings, header_brand_text: e.target.value })}
+                  placeholder={settings.site_name || 'Digihub Innovation Center Pvt. Ltd.'}
+                  className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-300 rounded-xl focus:outline-none focus:border-emerald-500"
                 />
               </div>
             </div>

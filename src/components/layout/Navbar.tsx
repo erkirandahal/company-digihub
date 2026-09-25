@@ -11,8 +11,23 @@ export const Navbar: React.FC = () => {
   const [openMobileSubmenu, setOpenMobileSubmenu] = useState<string | null>(null);
   const location = useLocation();
   const currentUser = authApi.getCurrentUser();
-  const { site_name, site_logo_url, tagline, address, phone, nav_menu_items } = useSiteSettings();
+  const {
+    site_name,
+    site_logo_url,
+    tagline,
+    header_brand_text_enabled,
+    header_brand_text,
+    address,
+    phone,
+    nav_menu_items,
+  } = useSiteSettings();
   const phoneHref = phone ? `tel:${phone.replace(/[^+\d]/g, '')}` : undefined;
+  // Default to shown when the setting hasn't been saved yet — only an explicit
+  // "off" (from Admin -> Settings -> Branding) hides the name next to the logo.
+  const showBrandText = header_brand_text_enabled === undefined
+    || header_brand_text_enabled === '1'
+    || header_brand_text_enabled === 'true';
+  const brandText = header_brand_text || site_name;
 
   const navLinks: NavMenuItem[] = parseNavMenuItems(nav_menu_items)
     .filter((item) => item.visible)
@@ -79,10 +94,10 @@ export const Navbar: React.FC = () => {
               </div>
             ) : null}
 
-            {site_name ? (
+            {showBrandText && brandText ? (
               <span className="flex flex-col leading-tight min-w-0">
                 <span className="text-lg sm:text-xl font-black tracking-tight text-slate-900 truncate">
-                  {site_name}
+                  {brandText}
                 </span>
                 {tagline && (
                   <span className="hidden sm:block text-[11px] font-semibold text-indigo-600 tracking-wide truncate">
@@ -90,14 +105,14 @@ export const Navbar: React.FC = () => {
                   </span>
                 )}
               </span>
-            ) : (
+            ) : !site_name ? (
               // Real site identity hasn't loaded yet (and no cached copy exists) —
               // show a neutral loading placeholder rather than any fallback name.
               <span className="flex items-center gap-3">
                 <span className="w-10 h-10 rounded-xl bg-slate-100 animate-pulse block" />
                 <span className="w-28 h-5 rounded bg-slate-100 animate-pulse block" />
               </span>
-            )}
+            ) : null}
           </Link>
 
           {/* Desktop Nav Links */}
