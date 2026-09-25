@@ -1,4 +1,4 @@
 ---
 deployment:
   tasks:
-    - /bin/bash $HOME/pragyainnovative/deploy.sh
+    - /bin/bash $HOME/digihub/deploy.sh
