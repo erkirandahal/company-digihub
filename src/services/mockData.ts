@@ -253,7 +253,7 @@ export const INITIAL_POPUPS: Popup[] = [
 
 export const INITIAL_SETTINGS: Setting[] = [
   { key: 'site_name', value: 'Digihub Innovation Center Pvt. Ltd.', group: 'general', type: 'text' },
-  { key: 'tagline', value: 'Complete IT, E-Commerce & Printing Solutions Under One Roof', group: 'general', type: 'text' },
+  { key: 'tagline', value: 'Software, Innovation & IT Solutions for a Digital Nepal', group: 'general', type: 'text' },
   { key: 'company_description', value: 'Digihub Innovation Center Pvt. Ltd. is a Bhaktapur-based company providing IT consultancy, software and website development, e-commerce solutions, computer networking and hardware, technology training and certification, and printing, branding and stationery services across Nepal.', group: 'general', type: 'textarea' },
   { key: 'pan_vat_number', value: '', group: 'general', type: 'text' },
   { key: 'contact_email', value: 'info@digihubic.com.np', group: 'contact', type: 'text' },
@@ -263,8 +263,8 @@ export const INITIAL_SETTINGS: Setting[] = [
   { key: 'maps_lng', value: '85.4300', group: 'contact', type: 'text' },
   { key: 'maps_embed_url', value: 'https://www.google.com/maps?q=Suryabinayak,+Bhaktapur&output=embed', group: 'contact', type: 'text' },
   { key: 'social_links', value: JSON.stringify([]), group: 'social', type: 'json' },
-  { key: 'meta_title', value: 'Digihub Innovation Center Pvt. Ltd. | IT, E-Commerce & Printing Solutions in Nepal', group: 'seo', type: 'text' },
-  { key: 'meta_description', value: 'Digihub Innovation Center provides IT consultancy, software & website development, e-commerce, networking & hardware, training & certification, and printing & branding services in Bhaktapur, Nepal.', group: 'seo', type: 'textarea' },
+  { key: 'meta_title', value: 'Digihub Innovation Center Pvt. Ltd. | Software, IT & Innovation Solutions in Nepal', group: 'seo', type: 'text' },
+  { key: 'meta_description', value: 'Digihub Innovation Center provides software & website development, IT consultancy, e-commerce, networking & hardware, training & certification, and printing & branding services in Bhaktapur, Nepal.', group: 'seo', type: 'textarea' },
   { key: 'footer_about_text', value: 'Digihub Innovation Center Pvt. Ltd. provides IT, e-commerce, networking, training and printing services in Nepal.', group: 'footer', type: 'text' },
   { key: 'footer_newsletter_heading', value: 'Stay Updated with Digihub Innovation Center', group: 'footer', type: 'text' },
   { key: 'footer_newsletter_subtext', value: 'Occasional updates on our services, offers and technology tips.', group: 'footer', type: 'textarea' },

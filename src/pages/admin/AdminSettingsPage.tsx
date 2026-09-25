@@ -18,16 +18,16 @@ export const AdminSettingsPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'settings' | 'audit'>('settings');
   const [settings, setSettings] = useState<Record<string, any>>({
     site_name: 'Digihub Innovation Center Pvt. Ltd.',
-    tagline: 'Complete IT, E-Commerce & Printing Solutions Under One Roof',
+    tagline: 'Software, Innovation & IT Solutions for a Digital Nepal',
     contact_email: 'info@digihubic.com.np',
     support_email: '',
     phone: '+977-1-XXXXXXX',
     mobile: '',
     address: 'Suryabinayak Municipality Ward No. 3, Bhaktapur, Nepal',
     pan_vat_number: '',
-    meta_title: 'Digihub Innovation Center Pvt. Ltd. | IT, E-Commerce & Printing Solutions in Nepal',
+    meta_title: 'Digihub Innovation Center Pvt. Ltd. | Software, IT & Innovation Solutions in Nepal',
     meta_description:
-      'Digihub Innovation Center provides IT consultancy, software & website development, e-commerce, networking & hardware, training & certification, and printing & branding services in Bhaktapur, Nepal.',
+      'Digihub Innovation Center provides software & website development, IT consultancy, e-commerce, networking & hardware, training & certification, and printing & branding services in Bhaktapur, Nepal.',
     footer_about_text: 'Digihub Innovation Center Pvt. Ltd. provides IT, e-commerce, networking, training and printing services in Nepal.',
     footer_newsletter_heading: 'Stay Updated with Digihub Innovation Center',
     footer_newsletter_subtext:

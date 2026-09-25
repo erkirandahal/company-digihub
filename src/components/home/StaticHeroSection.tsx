@@ -15,14 +15,14 @@ export const StaticHeroSection: React.FC = () => {
           </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-tight">
-            Complete IT, E-Commerce &{' '}
+            Software, Innovation &{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-indigo-400">
-              Printing Solutions
+              IT Solutions
             </span>
           </h1>
 
           <p className="text-lg text-slate-600 leading-relaxed max-w-2xl font-normal">
-            From software, websites and networking to e-commerce, training and printing, Digihub Innovation Center brings IT and business services together for organizations and individuals across Nepal.
+            From custom software, websites and IT consulting to e-commerce, networking, training and printing, Digihub Innovation Center brings innovative technology and business services together for organizations and individuals across Nepal.
           </p>
 
           <div className="pt-2 flex flex-wrap gap-4 items-center">

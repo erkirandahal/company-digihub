@@ -280,7 +280,7 @@ class DatabaseSeeder extends Seeder
         // 8. Site Settings — keys match what the React frontend actually reads
         // (see src/hooks/useSiteSettings.ts, Footer.tsx, Navbar.tsx, ContactPage.tsx, AdminSettingsPage.tsx)
         Setting::set('site_name', 'Digihub Innovation Center Pvt. Ltd.', 'general');
-        Setting::set('tagline', 'Complete IT, E-Commerce & Printing Solutions Under One Roof', 'general');
+        Setting::set('tagline', 'Software, Innovation & IT Solutions for a Digital Nepal', 'general');
         Setting::set('company_description', 'Digihub Innovation Center Pvt. Ltd. is a Bhaktapur-based company providing IT consultancy, software and website development, e-commerce solutions, computer networking and hardware, technology training and certification, and printing, branding and stationery services across Nepal.', 'general');
         Setting::set('pan_vat_number', '', 'general');
 
@@ -295,8 +295,8 @@ class DatabaseSeeder extends Seeder
         // No confirmed social accounts yet — add real links from Admin -> Settings -> Social Media.
         Setting::set('social_links', json_encode([]), 'social', 'json');
 
-        Setting::set('meta_title', 'Digihub Innovation Center Pvt. Ltd. | IT, E-Commerce & Printing Solutions in Nepal', 'seo');
-        Setting::set('meta_description', 'Digihub Innovation Center provides IT consultancy, software & website development, e-commerce, networking & hardware, training & certification, and printing & branding services in Bhaktapur, Nepal.', 'seo');
+        Setting::set('meta_title', 'Digihub Innovation Center Pvt. Ltd. | Software, IT & Innovation Solutions in Nepal', 'seo');
+        Setting::set('meta_description', 'Digihub Innovation Center provides software & website development, IT consultancy, e-commerce, networking & hardware, training & certification, and printing & branding services in Bhaktapur, Nepal.', 'seo');
 
         Setting::set('footer_about_text', 'Digihub Innovation Center Pvt. Ltd. provides IT, e-commerce, networking, training and printing services in Nepal.', 'footer');
         Setting::set('footer_newsletter_heading', 'Stay Updated with Digihub Innovation Center', 'footer');

@@ -11,7 +11,7 @@ export const CompanyOverviewSection: React.FC = () => {
             About Digihub Innovation Center
           </div>
           <h2 className="text-3xl font-extrabold text-slate-900 tracking-tight leading-snug">
-            IT, E-Commerce & Printing Services Under One Roof
+            Software, Innovation & IT Solutions Under One Roof
           </h2>
           <p className="text-slate-600 leading-relaxed">
             Digihub Innovation Center Pvt. Ltd. is a private limited company registered under the Companies Act, 2063, with its registered office in Suryabinayak Municipality, Bhaktapur. We work in trading and services.
