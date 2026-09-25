@@ -1,8 +1,8 @@
 {
-    "name": "pragyainnovative/backend",
+    "name": "digihubic/backend",
     "type": "project",
-    "description": "Backend for Pragya Innovative Pvt. Ltd. (Laravel 12 REST API & Sanctum)",
-    "keywords": ["laravel", "framework", "rest-api", "sanctum", "pragya-innovative", "cms", "crm"],
+    "description": "Backend for Digihub Innovation Center Pvt. Ltd. (Laravel 12 REST API & Sanctum)",
+    "keywords": ["laravel", "framework", "rest-api", "sanctum", "digihub-innovation-center", "cms", "crm"],
     "license": "MIT",
     "require": {
         "php": "^8.2",

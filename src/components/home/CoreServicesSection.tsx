@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, ChevronRight, CheckCircle2, Code2, BarChart3, Landmark, BookOpen, Users2, Cpu } from 'lucide-react';
+import { ArrowRight, ChevronRight, CheckCircle2, Cpu, Code2, ShoppingCart, Network, GraduationCap, Printer } from 'lucide-react';
 import { Service } from '../../types';
 
 interface Props {
@@ -9,16 +9,18 @@ interface Props {
 
 const getServiceIcon = (name: string) => {
   switch (name) {
-    case 'IT, Software & Digital Infrastructure':
+    case 'IT & Technology Consulting':
+      return <Cpu className="w-6 h-6 text-emerald-600" />;
+    case 'Software & Website Development':
       return <Code2 className="w-6 h-6 text-emerald-600" />;
-    case 'Research, Survey & Data Management':
-      return <BarChart3 className="w-6 h-6 text-emerald-600" />;
-    case 'Policy, Management & Institutional Consulting':
-      return <Landmark className="w-6 h-6 text-emerald-600" />;
-    case 'Publishing, Digital Content & Communication':
-      return <BookOpen className="w-6 h-6 text-emerald-600" />;
-    case 'Capacity Building, Collaboration & Professional Services':
-      return <Users2 className="w-6 h-6 text-emerald-600" />;
+    case 'E-Commerce Solutions & Digital Marketing':
+      return <ShoppingCart className="w-6 h-6 text-emerald-600" />;
+    case 'Computer Networking, Hardware & Electronics':
+      return <Network className="w-6 h-6 text-emerald-600" />;
+    case 'Training, Seminars & Certification Courses':
+      return <GraduationCap className="w-6 h-6 text-emerald-600" />;
+    case 'Printing, Branding, Graphics & Stationery':
+      return <Printer className="w-6 h-6 text-emerald-600" />;
     default:
       return <Cpu className="w-6 h-6 text-emerald-600" />;
   }
@@ -36,7 +38,7 @@ export const CoreServicesSection: React.FC<Props> = ({ services }) => {
             Core Services
           </h2>
           <p className="text-slate-600 text-sm mt-1 max-w-xl">
-            Technology, research, policy consulting, publishing and capacity building tailored to institutional requirements.
+            IT consulting, software and web development, e-commerce, networking, training and printing services tailored to your needs.
           </p>
         </div>
         <Link

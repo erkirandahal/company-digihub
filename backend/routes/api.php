@@ -29,7 +29,7 @@ use App\Http\Controllers\Api\V1\HeroSlideController;
 /*
 |--------------------------------------------------------------------------
 | API Routes — Version 1 (/api/v1/)
-| PRAGYA INNOVATIVE PVT. LTD.
+| digihub innovation center PVT. LTD.
 |--------------------------------------------------------------------------
 */
 
@@ -41,7 +41,7 @@ Route::prefix('v1')->group(function () {
     Route::get('/health', function () {
         return response()->json([
             'success' => true,
-            'message' => 'Pragya Innovative API v1 operational',
+            'message' => 'Digihub Innovation Center API v1 operational',
             'timestamp' => now()->toIso8601String(),
             'version' => '1.0.0',
         ]);

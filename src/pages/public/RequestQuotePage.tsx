@@ -6,9 +6,9 @@ import { usePageMeta } from '../../hooks/usePageMeta';
 
 export const RequestQuotePage: React.FC = () => {
   usePageMeta({
-    title: 'Request a Proposal | Pragya Innovative Pvt. Ltd.',
+    title: 'Request a Proposal | Digihub Innovation Center Pvt. Ltd.',
     description:
-      'Tell us about your project and get a tailored proposal from Pragya Innovative Pvt. Ltd.',
+      'Tell us about your project and get a tailored proposal from Digihub Innovation Center Pvt. Ltd.',
   });
   const [searchParams] = useSearchParams();
   const preselectedService = searchParams.get('service') || '';
@@ -21,7 +21,7 @@ export const RequestQuotePage: React.FC = () => {
     phone: '',
     project_title: '',
     project_description: '',
-    required_services: preselectedService ? [preselectedService] : ['IT, Software & Digital Infrastructure'],
+    required_services: preselectedService ? [preselectedService] : ['IT & Technology Consulting'],
     estimated_budget: '$10,000 - $25,000',
     timeline: '3 - 6 Months',
     preferred_contact_method: 'Email',
@@ -32,11 +32,12 @@ export const RequestQuotePage: React.FC = () => {
   const [error, setError] = useState('');
 
   const servicesList = [
-    'IT, Software & Digital Infrastructure',
-    'Research, Survey & Data Management',
-    'Policy, Management & Institutional Consulting',
-    'Publishing, Digital Content & Communication',
-    'Capacity Building, Collaboration & Professional Services',
+    'IT & Technology Consulting',
+    'Software & Website Development',
+    'E-Commerce Solutions & Digital Marketing',
+    'Computer Networking, Hardware & Electronics',
+    'Training, Seminars & Certification Courses',
+    'Printing, Branding, Graphics & Stationery',
   ];
 
   const toggleService = (serv: string) => {

@@ -7,9 +7,9 @@ import { usePageMeta } from '../../hooks/usePageMeta';
 
 export const SolutionsPage: React.FC = () => {
   usePageMeta({
-    title: 'Solutions | Pragya Innovative Pvt. Ltd.',
+    title: 'Solutions | Digihub Innovation Center Pvt. Ltd.',
     description:
-      'Solution packages combining software, research and consulting expertise from Pragya Innovative Pvt. Ltd.',
+      'Solution packages combining IT, networking, training and printing expertise from Digihub Innovation Center Pvt. Ltd.',
   });
   const [solutions, setSolutions] = useState<Solution[]>([]);
   const [loading, setLoading] = useState(true);
@@ -28,13 +28,13 @@ export const SolutionsPage: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl space-y-4">
             <span className="text-indigo-700 font-bold text-xs uppercase tracking-wider">
-              Institutional Products
+              Service Packages
             </span>
             <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight">
               Solutions
             </h1>
             <p className="text-slate-600 text-base leading-relaxed">
-              Combined software, research and consulting packages tailored to institutional needs.
+              Combined IT, networking, training and printing packages tailored to your needs.
             </p>
           </div>
         </div>

@@ -11,18 +11,18 @@ export const StaticHeroSection: React.FC = () => {
         <div className="max-w-3xl space-y-6">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-indigo-200 text-indigo-700 text-xs font-semibold tracking-wide shadow-xs">
             <Sparkles className="w-3.5 h-3.5" />
-            <span>PRAGYA INNOVATIVE PVT. LTD.</span>
+            <span>DIGIHUB INNOVATION CENTER PVT. LTD.</span>
           </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-tight">
-            Innovation, Research & Technology for a{' '}
+            Complete IT, E-Commerce &{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-indigo-400">
-              Better Tomorrow
+              Printing Solutions
             </span>
           </h1>
 
           <p className="text-lg text-slate-600 leading-relaxed max-w-2xl font-normal">
-            From software and digital infrastructure to research, policy consulting and publishing, Pragya Innovative works with government, private and development partners across Nepal.
+            From software, websites and networking to e-commerce, training and printing, Digihub Innovation Center brings IT and business services together for organizations and individuals across Nepal.
           </p>
 
           <div className="pt-2 flex flex-wrap gap-4 items-center">
@@ -47,19 +47,19 @@ export const StaticHeroSection: React.FC = () => {
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 pt-10 border-t border-slate-200 text-slate-600">
           <div className="space-y-1">
             <span className="text-2xl font-bold text-slate-900 tracking-tight">IT & Software</span>
-            <p className="text-xs text-slate-500">Digital Infrastructure & AI</p>
+            <p className="text-xs text-slate-500">Websites, Software & Consulting</p>
           </div>
           <div className="space-y-1">
-            <span className="text-2xl font-bold text-slate-900 tracking-tight">Research</span>
-            <p className="text-xs text-slate-500">Surveys, Studies & M&E</p>
+            <span className="text-2xl font-bold text-slate-900 tracking-tight">E-Commerce</span>
+            <p className="text-xs text-slate-500">Online Stores & Marketing</p>
           </div>
           <div className="space-y-1">
-            <span className="text-2xl font-bold text-slate-900 tracking-tight">Consulting</span>
-            <p className="text-xs text-slate-500">Policy & Institutional Advisory</p>
+            <span className="text-2xl font-bold text-slate-900 tracking-tight">Networking</span>
+            <p className="text-xs text-slate-500">Hardware & IT Infrastructure</p>
           </div>
           <div className="space-y-1">
-            <span className="text-2xl font-bold text-slate-900 tracking-tight">Publishing</span>
-            <p className="text-xs text-slate-500">Content & Capacity Building</p>
+            <span className="text-2xl font-bold text-slate-900 tracking-tight">Printing</span>
+            <p className="text-xs text-slate-500">Branding & Stationery</p>
           </div>
         </div>
       </div>

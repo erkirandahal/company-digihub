@@ -7,9 +7,9 @@ import { usePageMeta } from '../../hooks/usePageMeta';
 
 export const ProjectsPage: React.FC = () => {
   usePageMeta({
-    title: 'Case Studies | Pragya Innovative Pvt. Ltd.',
+    title: 'Case Studies | Digihub Innovation Center Pvt. Ltd.',
     description:
-      'Explore projects delivered by Pragya Innovative across technology, research, policy consulting and publishing.',
+      'Explore projects delivered by Digihub Innovation Center across IT, e-commerce, networking and printing.',
   });
   const [projects, setProjects] = useState<Project[]>([]);
   const [industries, setIndustries] = useState<Industry[]>([]);
@@ -48,7 +48,7 @@ export const ProjectsPage: React.FC = () => {
               Case Studies
             </h1>
             <p className="text-slate-600 text-base leading-relaxed">
-              Projects delivered by Pragya Innovative across technology, research, policy consulting and publishing.
+              Projects delivered by Digihub Innovation Center across IT, e-commerce, networking and printing.
             </p>
           </div>
         </div>

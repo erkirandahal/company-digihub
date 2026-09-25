@@ -64,7 +64,7 @@ export const apiClient = axios.create({
 
 // Attach Authorization Bearer token from localStorage
 apiClient.interceptors.request.use((config) => {
-  const token = localStorage.getItem('pragya_auth_token');
+  const token = localStorage.getItem('digihub_auth_token');
   if (token) {
     config.headers.Authorization = `Bearer ${token}`;
   }
@@ -75,7 +75,7 @@ apiClient.interceptors.request.use((config) => {
 class LocalStorageDataStore {
   private get<T>(key: string, defaultData: T): T {
     try {
-      const item = localStorage.getItem(`pragya_${key}`);
+      const item = localStorage.getItem(`digihub_${key}`);
       return item ? JSON.parse(item) : defaultData;
     } catch {
       return defaultData;
@@ -84,7 +84,7 @@ class LocalStorageDataStore {
 
   private set<T>(key: string, data: T): void {
     try {
-      localStorage.setItem(`pragya_${key}`, JSON.stringify(data));
+      localStorage.setItem(`digihub_${key}`, JSON.stringify(data));
     } catch (e) {
       console.warn('Storage quota reached', e);
     }
@@ -257,8 +257,8 @@ export const authApi = {
     try {
       const res = await apiClient.post('/auth/login', credentials);
       if (res.data.data?.token) {
-        localStorage.setItem('pragya_auth_token', res.data.data.token);
-        localStorage.setItem('pragya_user', JSON.stringify(res.data.data.user));
+        localStorage.setItem('digihub_auth_token', res.data.data.token);
+        localStorage.setItem('digihub_user', JSON.stringify(res.data.data.user));
       }
       return res.data;
     } catch (error: any) {
@@ -275,18 +275,18 @@ export const authApi = {
     try {
       await apiClient.post('/auth/logout');
     } catch {}
-    localStorage.removeItem('pragya_auth_token');
-    localStorage.removeItem('pragya_user');
+    localStorage.removeItem('digihub_auth_token');
+    localStorage.removeItem('digihub_user');
     return { success: true, message: 'Logged out successfully', data: null };
   },
 
   getCurrentUser: (): User | null => {
-    const raw = localStorage.getItem('pragya_user');
+    const raw = localStorage.getItem('digihub_user');
     return raw ? JSON.parse(raw) : null;
   },
 
   isAuthenticated: (): boolean => {
-    return !!localStorage.getItem('pragya_auth_token');
+    return !!localStorage.getItem('digihub_auth_token');
   },
 };
 
@@ -596,7 +596,7 @@ export const blogsApi = {
           status: (formData.get('status') as Blog['status']) || 'published',
           featured: formData.get('featured') === 'true',
           view_count: 0,
-          author: { name: 'Editor', email: 'info@pragyainnovative.com.np' },
+          author: { name: 'Editor', email: 'info@digihubic.com.np' },
           category: { id: 1, name: 'Technology Insights', slug: 'tech' },
           tags: [{ id: 1, name: 'Architecture', slug: 'architecture' }],
           published_at: new Date().toISOString().slice(0, 10),
@@ -926,7 +926,7 @@ export const careersApi = {
           job_title: jobTitle,
           slug: jobTitle.toLowerCase().replace(/\s+/g, '-') + '-' + Math.floor(Math.random() * 1000),
           department: payload.department || 'Engineering',
-          location: payload.location || 'Kathmandu, Nepal (Hybrid / Onsite)',
+          location: payload.location || 'Bhaktapur, Nepal (Hybrid / Onsite)',
           employment_type: payload.employment_type || 'Full-time',
           experience: payload.experience || '2+ years',
           salary_information: payload.salary_information,

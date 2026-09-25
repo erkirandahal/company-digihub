@@ -19,7 +19,7 @@ export const EnterpriseSolutionsSection: React.FC<Props> = ({ solutions }) => {
             Solution Packages
           </h2>
           <p className="text-slate-500 text-sm mt-2">
-            Combined software, research and consulting packages tailored to institutional needs.
+            Combined IT, networking, training and printing packages tailored to your needs.
           </p>
         </div>
 

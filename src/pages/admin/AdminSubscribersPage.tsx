@@ -39,7 +39,7 @@ export const AdminSubscribersPage: React.FC = () => {
     const encodedUri = encodeURI(csvContent);
     const link = document.createElement('a');
     link.setAttribute('href', encodedUri);
-    link.setAttribute('download', 'pragya_newsletter_subscribers.csv');
+    link.setAttribute('download', 'digihub_newsletter_subscribers.csv');
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -56,7 +56,7 @@ export const AdminSubscribersPage: React.FC = () => {
             Newsletter Subscribers
           </h2>
           <p className="text-xs text-slate-500 mt-0.5">
-            People subscribed to Pragya Innovative updates.
+            People subscribed to Digihub Innovation Center updates.
           </p>
         </div>
 

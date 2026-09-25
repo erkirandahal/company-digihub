@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle2, Code2, BarChart3, Landmark } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Code2, Network, Printer } from 'lucide-react';
 
 export const CompanyOverviewSection: React.FC = () => {
   return (
@@ -8,34 +8,34 @@ export const CompanyOverviewSection: React.FC = () => {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div className="space-y-5">
           <div className="inline-block px-3 py-1 rounded-md text-xs font-bold uppercase tracking-wider text-emerald-800 bg-emerald-100">
-            About Pragya Innovative
+            About Digihub Innovation Center
           </div>
           <h2 className="text-3xl font-extrabold text-slate-900 tracking-tight leading-snug">
-            Technology, Research & Consulting Under One Roof
+            IT, E-Commerce & Printing Services Under One Roof
           </h2>
           <p className="text-slate-600 leading-relaxed">
-            Pragya Innovative Pvt. Ltd. is a private limited company registered under the Companies Act, 2063, with its registered office in Bijuli Bazar, Kathmandu. We work in manufacturing, trading and services.
+            Digihub Innovation Center Pvt. Ltd. is a private limited company registered under the Companies Act, 2063, with its registered office in Suryabinayak Municipality, Bhaktapur. We work in trading and services.
           </p>
           <p className="text-slate-600 leading-relaxed">
-            The company brings together technology, research, policy consulting, publishing and capacity building under one roof — serving federal, provincial and local governments, ministries, commissions, public and community organizations, development partners, universities, research institutions and the private sector.
+            The company brings together IT consultancy, software and website development, e-commerce, computer networking and hardware, technology training, and printing and branding under one roof — serving government and non-government organizations, companies and firms, schools and colleges, and individual customers.
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
             <div className="flex items-center gap-2 text-sm font-medium text-slate-800">
               <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-              <span>One-stop technology & consulting partner</span>
+              <span>One-stop IT & business services partner</span>
             </div>
             <div className="flex items-center gap-2 text-sm font-medium text-slate-800">
               <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-              <span>Multi-sector expertise</span>
+              <span>From software to hardware to print</span>
             </div>
             <div className="flex items-center gap-2 text-sm font-medium text-slate-800">
               <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-              <span>Evidence-based research approach</span>
+              <span>Training & certification partnerships</span>
             </div>
             <div className="flex items-center gap-2 text-sm font-medium text-slate-800">
               <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-              <span>Future-ready: AI & digital transformation</span>
+              <span>Serving businesses, institutions & the public</span>
             </div>
           </div>
 
@@ -56,7 +56,7 @@ export const CompanyOverviewSection: React.FC = () => {
               What We Do
             </span>
             <span className="px-2.5 py-0.5 rounded text-[11px] font-semibold bg-emerald-100 text-emerald-800">
-              5 Core Services
+              6 Core Services
             </span>
           </div>
 
@@ -66,33 +66,33 @@ export const CompanyOverviewSection: React.FC = () => {
                 <Code2 className="w-4 h-4" />
               </div>
               <div>
-                <h4 className="font-bold text-slate-900">IT, Software & Digital Infrastructure</h4>
+                <h4 className="font-bold text-slate-900">Software & Website Development</h4>
                 <p className="text-slate-500 text-xs mt-0.5">
-                  Software, apps, websites, cloud, cybersecurity and AI solutions.
+                  Custom software, websites and IT-enabled services.
                 </p>
               </div>
             </div>
 
             <div className="flex items-start gap-4 p-4 rounded-xl bg-white border border-slate-200 shadow-xs">
               <div className="w-8 h-8 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0">
-                <BarChart3 className="w-4 h-4" />
+                <Network className="w-4 h-4" />
               </div>
               <div>
-                <h4 className="font-bold text-slate-900">Research, Survey & Data Management</h4>
+                <h4 className="font-bold text-slate-900">Networking, Hardware & Electronics</h4>
                 <p className="text-slate-500 text-xs mt-0.5">
-                  Baseline, feasibility and impact studies, and monitoring & evaluation.
+                  Computer networking, hardware and electronics supply.
                 </p>
               </div>
             </div>
 
             <div className="flex items-start gap-4 p-4 rounded-xl bg-white border border-slate-200 shadow-xs">
               <div className="w-8 h-8 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0">
-                <Landmark className="w-4 h-4" />
+                <Printer className="w-4 h-4" />
               </div>
               <div>
-                <h4 className="font-bold text-slate-900">Policy & Institutional Consulting</h4>
+                <h4 className="font-bold text-slate-900">Printing, Branding & Stationery</h4>
                 <p className="text-slate-500 text-xs mt-0.5">
-                  Laws, policies, plans, DPR, EIA/IEE and governance advisory.
+                  Digital & offset printing, graphics design and supplies.
                 </p>
               </div>
             </div>

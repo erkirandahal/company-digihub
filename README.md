@@ -1,4 +1,4 @@
-# PRAGYA INNOVATIVE PVT. LTD.
+# DIGIHUB INNOVATION CENTER PVT. LTD.
 
 > **Enterprise Software Development, E-Governance & Digital Transformation Platform**
 
@@ -66,7 +66,7 @@ php artisan serve --port=8000
 ```
 
 Seeded Administrative Credentials:
-- **Email**: `admin@pragyainnovative.com.np`
+- **Email**: `admin@digihubic.com.np`
 - **Password**: `password123`
 
 ### 2. Frontend (React)

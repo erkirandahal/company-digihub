@@ -8,7 +8,7 @@ use Illuminate\Http\JsonResponse;
 abstract class Controller extends BaseController
 {
     /**
-     * Standardized success response for the Pragya Innovative API.
+     * Standardized success response for the Digihub Innovation Center API.
      */
     protected function successResponse($data = [], string $message = 'Request successful', int $statusCode = 200, array $meta = []): JsonResponse
     {

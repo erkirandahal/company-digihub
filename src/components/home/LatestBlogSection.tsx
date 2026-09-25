@@ -17,7 +17,7 @@ export const LatestBlogSection: React.FC<Props> = ({ blogs }) => {
             Insights
           </div>
           <h2 className="text-3xl font-extrabold text-slate-900 tracking-tight">
-            Latest from Pragya Innovative
+            Latest from Digihub Innovation Center
           </h2>
         </div>
         <Link

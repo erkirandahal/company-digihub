@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { CheckCircle2, ChevronRight, Code2, BarChart3, Landmark, BookOpen, Users2, Cpu, ArrowRight } from 'lucide-react';
+import { CheckCircle2, ChevronRight, Cpu, Code2, ShoppingCart, Network, GraduationCap, Printer, ArrowRight } from 'lucide-react';
 import { servicesApi, getStorageUrl } from '../../services/api';
 import { Service } from '../../types';
 import { usePageMeta } from '../../hooks/usePageMeta';
 
 export const ServicesPage: React.FC = () => {
   usePageMeta({
-    title: 'Our Services | Pragya Innovative Pvt. Ltd.',
+    title: 'Our Services | Digihub Innovation Center Pvt. Ltd.',
     description:
-      'Software & digital solutions, research and data management, policy and institutional consulting, publishing, and capacity-building services in Nepal.',
+      'IT consulting, software & website development, e-commerce, networking & hardware, training & certification, and printing & branding services in Nepal.',
   });
   const [services, setServices] = useState<Service[]>([]);
   const [loading, setLoading] = useState(true);
@@ -23,16 +23,18 @@ export const ServicesPage: React.FC = () => {
 
   const getServiceIcon = (name: string) => {
     switch (name) {
-      case 'IT, Software & Digital Infrastructure':
+      case 'IT & Technology Consulting':
+        return <Cpu className="w-6 h-6 text-emerald-600" />;
+      case 'Software & Website Development':
         return <Code2 className="w-6 h-6 text-emerald-600" />;
-      case 'Research, Survey & Data Management':
-        return <BarChart3 className="w-6 h-6 text-emerald-600" />;
-      case 'Policy, Management & Institutional Consulting':
-        return <Landmark className="w-6 h-6 text-emerald-600" />;
-      case 'Publishing, Digital Content & Communication':
-        return <BookOpen className="w-6 h-6 text-emerald-600" />;
-      case 'Capacity Building, Collaboration & Professional Services':
-        return <Users2 className="w-6 h-6 text-emerald-600" />;
+      case 'E-Commerce Solutions & Digital Marketing':
+        return <ShoppingCart className="w-6 h-6 text-emerald-600" />;
+      case 'Computer Networking, Hardware & Electronics':
+        return <Network className="w-6 h-6 text-emerald-600" />;
+      case 'Training, Seminars & Certification Courses':
+        return <GraduationCap className="w-6 h-6 text-emerald-600" />;
+      case 'Printing, Branding, Graphics & Stationery':
+        return <Printer className="w-6 h-6 text-emerald-600" />;
       default:
         return <Cpu className="w-6 h-6 text-emerald-600" />;
     }
@@ -51,7 +53,7 @@ export const ServicesPage: React.FC = () => {
               Our Services
             </h1>
             <p className="text-slate-600 text-base leading-relaxed">
-              Software & digital solutions, research and data management, policy and institutional consulting, publishing, and capacity-building services for institutions across Nepal.
+              IT consulting, software & website development, e-commerce, networking & hardware, training & certification, and printing & branding services for businesses, institutions and individuals across Nepal.
             </p>
           </div>
         </div>

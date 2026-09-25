@@ -11,7 +11,7 @@ export const ProjectDetailPage: React.FC = () => {
   const [loading, setLoading] = useState(true);
 
   usePageMeta({
-    title: project ? `${project.title} | Pragya Innovative Pvt. Ltd.` : undefined,
+    title: project ? `${project.title} | Digihub Innovation Center Pvt. Ltd.` : undefined,
     description: project?.short_description,
     image: project?.featured_image ? getStorageUrl(project.featured_image) : undefined,
   });

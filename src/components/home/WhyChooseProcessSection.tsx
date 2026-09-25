@@ -23,7 +23,7 @@ export const WhyChooseProcessSection: React.FC = () => {
               Scoping & Requirement Analysis
             </h4>
             <p className="text-slate-600 text-xs leading-relaxed">
-              Understanding objectives, stakeholders and technical or research requirements in detail.
+              Understanding your goals, equipment and technical requirements in detail.
             </p>
           </div>
 
@@ -33,7 +33,7 @@ export const WhyChooseProcessSection: React.FC = () => {
               Design & Development
             </h4>
             <p className="text-slate-600 text-xs leading-relaxed">
-              Building software, research instruments, policy drafts or content plans against agreed specifications.
+              Building software, setting up networks, or producing print/design work against agreed specifications.
             </p>
           </div>
 
@@ -43,7 +43,7 @@ export const WhyChooseProcessSection: React.FC = () => {
               Quality Review & Consultation
             </h4>
             <p className="text-slate-600 text-xs leading-relaxed">
-              Verifying outputs with clients and stakeholders through structured review cycles.
+              Verifying outputs with clients through structured review cycles.
             </p>
           </div>
 
@@ -53,7 +53,7 @@ export const WhyChooseProcessSection: React.FC = () => {
               Delivery & Ongoing Support
             </h4>
             <p className="text-slate-600 text-xs leading-relaxed">
-              Final handover, publication or deployment, with continued support as needed.
+              Final handover, installation or deployment, with continued support as needed.
             </p>
           </div>
         </div>

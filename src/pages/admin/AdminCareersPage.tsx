@@ -6,7 +6,7 @@ import { Career, JobApplication } from '../../types';
 const emptyForm: Partial<Career> = {
   job_title: '',
   department: 'Engineering',
-  location: 'Kathmandu, Nepal (Hybrid / Onsite)',
+  location: 'Bhaktapur, Nepal (Hybrid / Onsite)',
   employment_type: 'Full-time',
   experience: '2+ years',
   salary_information: '',

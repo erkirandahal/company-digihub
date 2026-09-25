@@ -10,7 +10,7 @@ export const BottomCtaSection: React.FC = () => {
             Ready to start your next project?
           </h2>
           <p className="text-indigo-100 text-sm leading-relaxed">
-            Talk to our team about your software, research, policy consulting or publishing needs and receive a formal proposal.
+            Talk to our team about your IT, e-commerce, networking, training or printing needs and receive a formal proposal.
           </p>
           <div className="pt-4 flex flex-wrap gap-4 items-center">
             <Link

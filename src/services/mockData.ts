@@ -3,184 +3,194 @@ import { Service, Solution, Project, Blog, Technology, Industry, TeamMember, Cli
 export const INITIAL_SERVICES: Service[] = [
   {
     id: 1,
-    name: 'IT, Software & Digital Infrastructure',
-    slug: 'it-software-digital-infrastructure',
-    short_description: 'Custom software, mobile apps, websites, cloud, cybersecurity and AI solutions.',
-    full_description: 'We study, design, develop, test, deploy and maintain information technology, software and digital systems — including custom software, mobile applications, websites, digital platforms, Management Information Systems (MIS), databases, data processing and storage, cloud services, server setup and management, cybersecurity, networking and IT infrastructure, and artificial intelligence and machine learning solutions for government, private and development-sector clients. Example scenario: a municipal office wanting to move from paper-based citizen records to a searchable digital system could engage us to design the database, build a staff-facing MIS, and train office staff to use it.',
-    icon: 'Code2',
-    features: ['Custom software, web & mobile app development', 'Digital platforms, MIS & database management', 'Data processing, storage & cloud services', 'Server setup, networking & IT infrastructure', 'Cybersecurity & network protection', 'Artificial intelligence, machine learning & digital transformation advisory'],
-    technologies: ['Cloud Hosting', 'Cyber Security', 'Artificial Intelligence', 'Database Management'],
-    seo_title: 'IT, Software & Digital Infrastructure Services | Pragya Innovative',
-    seo_description: 'Custom software, mobile apps, websites, cloud, cybersecurity, networking and AI/ML solutions from Pragya Innovative Pvt. Ltd., Kathmandu, Nepal.',
+    name: 'IT & Technology Consulting',
+    slug: 'it-technology-consulting',
+    short_description: 'Computer and technology consultancy, IT infrastructure and managed hosting services.',
+    full_description: 'We provide computer and various technology consultancy services, ITC (Information Technology and Communication) infrastructure consultation, development and construction, managed services, hosting services and solutions, and ongoing support services for government, non-government and private clients. Example scenario: an office planning to move its systems online could engage us to assess its IT infrastructure needs and set up managed hosting and support.',
+    icon: 'Cpu',
+    features: ['Computer & technology consultancy', 'ITC infrastructure consultation & development', 'Managed hosting services & solutions', 'Ongoing IT support services', 'Satellite data & data processing value-added services'],
+    technologies: ['Networking & Server Hardware'],
+    seo_title: 'IT & Technology Consulting Services | Digihub Innovation Center',
+    seo_description: 'Computer and technology consultancy, ITC infrastructure and managed hosting services from Digihub Innovation Center Pvt. Ltd., Bhaktapur, Nepal.',
     status: 'active',
     sort_order: 1,
   },
   {
     id: 2,
-    name: 'Research, Survey & Data Management',
-    slug: 'research-survey-data-management',
-    short_description: 'Evidence-based research, surveys, baseline and feasibility studies, and monitoring & evaluation.',
-    full_description: 'We conduct study and research, surveys and opinion polls, data collection, analysis and management, baseline studies, feasibility studies, impact studies, and monitoring and evaluation across social, economic, legal, public administration, local governance, natural science, engineering, environmental, climate change, disaster risk reduction, sustainable development, gender equality and social inclusion (GESI), and peacebuilding and conflict-management themes — for government, non-government, community and private-sector organizations. Example scenario: a development partner planning a new program in a district could commission us to run a baseline study, so their results can later be measured against a clear starting point.',
-    icon: 'BarChart3',
-    features: ['Study, research & opinion polls', 'Baseline, feasibility & impact studies', 'Data collection, analysis & management', 'Monitoring & evaluation (M&E)', 'GESI, climate change & disaster-risk research', 'Peacebuilding & conflict-management studies'],
-    technologies: [],
-    seo_title: 'Research, Survey & Data Management Services | Pragya Innovative',
-    seo_description: 'Baseline studies, feasibility studies, surveys, data collection and monitoring & evaluation services in Nepal.',
+    name: 'Software & Website Development',
+    slug: 'software-website-development',
+    short_description: 'Custom software and website design, development, sale and support.',
+    full_description: 'We design, develop, trade and support computer software and websites, including consultation, development, trading, implementation and support of software solutions and IT-enabled services for organizations and individuals. Example scenario: a small business without an online presence could commission a website along with basic software to manage its day-to-day records.',
+    icon: 'Code2',
+    features: ['Website design & development', 'Custom software development & sale', 'IT-enabled services (ITES)', 'Software consultation, implementation & support'],
+    technologies: ['Laravel', 'ReactJS', 'MySQL'],
+    seo_title: 'Software & Website Development | Digihub Innovation Center',
+    seo_description: 'Custom software and website design, development and support services from Digihub Innovation Center Pvt. Ltd.',
     status: 'active',
     sort_order: 2,
   },
   {
     id: 3,
-    name: 'Policy, Management & Institutional Consulting',
-    slug: 'policy-management-institutional-consulting',
-    short_description: 'Laws, policies, plans, DPR, EIA/IEE and governance consulting for government and development partners.',
-    full_description: 'We prepare, revise, edit and quality-check laws, policies, rules and regulations, procedures, guidelines and standards, periodic and strategic plans, institutional development plans, medium-term expenditure frameworks, action plans, detailed project reports (DPR), environmental impact assessments (EIA), initial environmental examinations (IEE), social impact assessments (SIA) and environmental & social management plans (ESMP) — for federal, provincial and local governments, ministries, departments, commissions, authorities and development partners. Example scenario: a local government preparing an infrastructure project could ask us to draft the DPR and the accompanying IEE so the project meets regulatory requirements before it goes to tender.',
-    icon: 'Landmark',
-    features: ['Laws, policies, rules & regulations', 'Procedures, guidelines & standards', 'Strategic, institutional & periodic plans', 'Detailed Project Reports (DPR)', 'EIA, IEE, SIA & ESMP preparation', 'Governance & institutional strengthening advisory'],
-    technologies: [],
-    seo_title: 'Policy, Management & Institutional Consulting | Pragya Innovative',
-    seo_description: 'DPR, EIA, IEE, policy, planning and institutional consulting services for government and development partners in Nepal.',
+    name: 'E-Commerce Solutions & Digital Marketing',
+    slug: 'ecommerce-solutions-digital-marketing',
+    short_description: 'E-commerce consultancy, delivery services, and website marketing.',
+    full_description: 'We offer e-commerce related consultancy and services such as delivery service, e-commerce management, marketing and facilitation, as well as management and marketing services for websites. Example scenario: a retailer wanting to sell online could use this service to set up an online store, coordinate delivery, and manage day-to-day marketing.',
+    icon: 'ShoppingCart',
+    features: ['E-commerce consultancy & setup', 'Delivery service coordination', 'E-commerce management & facilitation', 'Website management & digital marketing'],
+    technologies: ['E-Commerce Platforms'],
+    seo_title: 'E-Commerce Solutions & Digital Marketing | Digihub Innovation Center',
+    seo_description: 'E-commerce consultancy, delivery coordination and website marketing services from Digihub Innovation Center Pvt. Ltd.',
     status: 'active',
     sort_order: 3,
   },
   {
     id: 4,
-    name: 'Publishing, Digital Content & Communication',
-    slug: 'publishing-digital-content-communication',
-    short_description: 'Books, reports, journals, e-books, documentaries and multimedia content.',
-    full_description: 'We write, edit, translate, design, print, publish and distribute books, reference books, research and project reports, annual reports, institutional profiles, souvenirs, journals, handbooks and brochures, and produce e-books, e-learning materials, audio-visual content, documentaries and other multimedia content for print and digital distribution. Example scenario: a research institute that has just completed a study could come to us for editing, design and print-ready layout of the final report, plus a short summary video for social media.',
-    icon: 'BookOpen',
-    features: ['Book, reference book & journal publishing', 'Research, project & annual report production', 'Institutional profiles, souvenirs & brochures', 'E-books & e-learning materials', 'Documentaries & audio-visual content', 'Multimedia production & digital distribution'],
-    technologies: [],
-    seo_title: 'Publishing, Digital Content & Communication | Pragya Innovative',
-    seo_description: 'Book publishing, digital content, e-learning and multimedia production services from Pragya Innovative Pvt. Ltd.',
+    name: 'Computer Networking, Hardware & Electronics',
+    slug: 'computer-networking-hardware-electronics',
+    short_description: 'Computer networking services and sale of hardware, IT and electronics goods.',
+    full_description: 'We provide computer networking-related services and sell and distribute computer hardware and materials, along with IT, electrical and various other electronics goods. Example scenario: an office moving to a new location could ask us to set up its network cabling and supply the computers and networking hardware it needs.',
+    icon: 'Network',
+    features: ['Computer networking services', 'Computer hardware sales & distribution', 'IT & electrical goods sales', 'Electronics equipment supply'],
+    technologies: ['Networking & Server Hardware'],
+    seo_title: 'Computer Networking, Hardware & Electronics | Digihub Innovation Center',
+    seo_description: 'Computer networking services and sale of hardware, IT and electronics goods from Digihub Innovation Center Pvt. Ltd.',
     status: 'active',
     sort_order: 4,
   },
   {
     id: 5,
-    name: 'Capacity Building, Collaboration & Professional Services',
-    slug: 'capacity-building-collaboration-professional-services',
-    short_description: 'Training, workshops, seminars and partnerships for research and innovation.',
-    full_description: 'We deliver leadership development, institutional capacity enhancement, training, orientation, workshops, seminars and conferences, and reconciliation and mediation programs, and partner with government, non-government, academic and private-sector organizations on research, innovation, technology development, consulting and publishing. Example scenario: an organization rolling out a new digital system could ask us to run a staff training and orientation workshop alongside the technical rollout, so adoption does not depend on a single IT-savvy employee.',
-    icon: 'Users2',
-    features: ['Leadership & institutional capacity development', 'Training, orientation & workshops', 'Seminars & conferences', 'Reconciliation & mediation programs', 'Research & innovation partnerships', 'Joint consulting & publishing collaborations'],
+    name: 'Training, Seminars & Certification Courses',
+    slug: 'training-seminars-certification-courses',
+    short_description: 'Technology training, seminars, and certification courses with academic partners.',
+    full_description: 'We conduct meetings, seminars and training on computer hardware and various technologies, and coordinate with domestic and foreign associations, organizations, universities, colleges and schools to run computer software, hardware and networking classes, certification courses, examinations and certificate issuance. Example scenario: a school wanting to offer basic computer certification to its students could partner with us to run the classes and issue certificates.',
+    icon: 'GraduationCap',
+    features: ['Technology seminars & training', 'Computer hardware & networking classes', 'Certification courses & examinations', 'Partnerships with schools, colleges & universities'],
     technologies: [],
-    seo_title: 'Capacity Building & Professional Services | Pragya Innovative',
-    seo_description: 'Training, workshops, capacity building and professional collaboration services from Pragya Innovative Pvt. Ltd.',
+    seo_title: 'Training, Seminars & Certification Courses | Digihub Innovation Center',
+    seo_description: 'Computer and technology training, seminars and certification courses from Digihub Innovation Center Pvt. Ltd.',
     status: 'active',
     sort_order: 5,
+  },
+  {
+    id: 6,
+    name: 'Printing, Branding, Graphics & Stationery',
+    slug: 'printing-branding-graphics-stationery',
+    short_description: 'Digital and offset printing, branding, graphics design, and stationery supplies.',
+    full_description: 'We provide digital printing, offset printing and all kinds of printing and branding-related work, graphics designing services, and sell and distribute copy, books, pens, papers, files, notebooks, stationery, and sports and educational materials. Example scenario: an organization launching an event could get branded banners, printed stationery and graphics design produced together for the occasion.',
+    icon: 'Printer',
+    features: ['Digital & offset printing', 'Branding & graphics design', 'Stationery & office supplies', 'Sports & educational materials'],
+    technologies: ['Graphic Design & Print Tools'],
+    seo_title: 'Printing, Branding, Graphics & Stationery | Digihub Innovation Center',
+    seo_description: 'Digital and offset printing, branding, graphics design and stationery supply services from Digihub Innovation Center Pvt. Ltd.',
+    status: 'active',
+    sort_order: 6,
   },
 ];
 
 // Combined service packages, illustrated with example scenarios rather than
-// claimed past engagements (the company is newly registered).
+// claimed past engagements.
 export const INITIAL_SOLUTIONS: Solution[] = [
   {
     id: 1,
-    title: 'Digital MIS & Software Platform Package',
-    slug: 'digital-mis-software-platform-package',
-    short_description: 'A combined software, hosting and training package for organizations digitizing their records and workflows.',
-    description: 'Bundles custom software or MIS development with server/cloud setup, cybersecurity basics, and staff training. Example scenario: a cooperative or public office wanting a member/citizen database, a simple staff dashboard, and secure hosting could commission this package as one engagement instead of sourcing each piece separately.',
-    features: ['Requirements study & system design', 'Custom software / MIS development', 'Cloud hosting & server setup', 'Staff training & handover documentation'],
-    benefits: ['Single point of accountability for the whole system', 'Staff trained to operate the system independently', 'Ongoing maintenance support available'],
-    technologies: ['Cloud Hosting', 'Database Management', 'Cyber Security'],
-    icon: 'Code2',
+    title: 'Website & E-Commerce Launch Package',
+    slug: 'website-ecommerce-launch-package',
+    short_description: 'A combined website, online store and delivery coordination package for businesses selling online.',
+    description: 'Bundles website development with e-commerce setup, management and delivery coordination. Example scenario: a shop wanting to start selling online could use this package to get a website, an online store, and a delivery workflow set up together.',
+    features: ['Website design & development', 'Online store setup & management', 'Delivery service coordination', 'Basic digital marketing setup'],
+    benefits: ['One vendor for the whole online launch', 'Faster time to a working online store', 'Ongoing management support available'],
+    technologies: ['Laravel', 'ReactJS', 'E-Commerce Platforms'],
+    icon: 'ShoppingCart',
     status: 'active',
     sort_order: 1,
   },
   {
     id: 2,
-    title: 'Baseline, Feasibility & Impact Study Package',
-    slug: 'baseline-feasibility-impact-study-package',
-    short_description: 'End-to-end research design, field data collection, analysis and reporting for a planned program or project.',
-    description: 'Covers the full research cycle: designing survey tools, collecting and cleaning data, analysis, and a final report with recommendations. Example scenario: a development partner about to launch a multi-year program could use this package to establish a baseline before the program starts and later commission a follow-up study to measure change.',
-    features: ['Survey & research tool design', 'Field data collection & data cleaning', 'Quantitative & qualitative analysis', 'Final report with findings & recommendations'],
-    benefits: ['Clear evidence base for planning decisions', 'Findings ready for donor or government reporting', 'Comparable results for future follow-up studies'],
-    technologies: [],
-    icon: 'BarChart3',
+    title: 'IT Infrastructure & Networking Package',
+    slug: 'it-infrastructure-networking-package',
+    short_description: 'Network setup, hardware supply and IT consultancy for a new or growing office.',
+    description: 'Combines IT consultancy with computer networking, hardware supply and hosting/support. Example scenario: an office opening a new branch could use this package to get its network cabling, computers and ongoing IT support handled as one engagement.',
+    features: ['IT infrastructure consultation', 'Network cabling & setup', 'Computer & networking hardware supply', 'Managed hosting & ongoing support'],
+    benefits: ['Single point of contact for setup and support', 'Consistent hardware and network standards', 'Faster office setup timelines'],
+    technologies: ['Networking & Server Hardware'],
+    icon: 'Network',
     status: 'active',
     sort_order: 2,
   },
   {
     id: 3,
-    title: 'Policy & Institutional Documentation Package',
-    slug: 'policy-institutional-documentation-package',
-    short_description: 'Drafting and review support for the plans, procedures and safeguard documents a project or institution needs.',
-    description: 'Combines policy/procedure drafting with plan preparation and, where relevant, environmental or social assessment documents. Example scenario: a local government preparing an infrastructure project could use this package to get the DPR, an IEE, and an implementation plan produced as one coordinated set of documents.',
-    features: ['Laws, policies, procedures & guidelines drafting', 'Strategic & institutional plan preparation', 'DPR / EIA / IEE / SIA / ESMP documentation', 'Review, editing & quality-check of existing documents'],
-    benefits: ['Documents aligned with regulatory requirements', 'Consistent terminology and structure across documents', 'Faster institutional approval cycles'],
+    title: 'School & Institution Training Package',
+    slug: 'school-institution-training-package',
+    short_description: 'Computer training, certification courses and networking classes for schools and institutions.',
+    description: 'Combines training and certification services with basic networking/hardware setup for computer labs. Example scenario: a school wanting to offer a computer certification program could use this package to set up its lab and run the training and certification together.',
+    features: ['Computer lab hardware & networking setup', 'Technology training & workshops', 'Certification courses & examinations', 'Ongoing curriculum support'],
+    benefits: ['Coordinated setup and training in one engagement', 'Certificates issued on course completion', 'Support for repeat training cohorts'],
     technologies: [],
-    icon: 'Landmark',
+    icon: 'GraduationCap',
     status: 'active',
     sort_order: 3,
   },
   {
     id: 4,
-    title: 'Knowledge & Publication Production Package',
-    slug: 'knowledge-publication-production-package',
-    short_description: 'Turns finished research or institutional content into a polished report, book or multimedia product.',
-    description: 'Covers editing, translation, design, layout and print or digital publishing, plus optional e-learning or audio-visual formats. Example scenario: an institution that has finished a study or annual report could use this package to get a designed, print-ready document along with a short explainer video for its website and social media.',
-    features: ['Editing, translation & proofreading', 'Design & print-ready layout', 'E-book & e-learning conversion', 'Short-form audio-visual / documentary production'],
-    benefits: ['Consistent, professional presentation of institutional knowledge', 'Content usable across print, web and social channels', 'Faster turnaround than sourcing each service separately'],
-    technologies: [],
-    icon: 'BookOpen',
+    title: 'Print & Brand Package',
+    slug: 'print-brand-package',
+    short_description: 'Branded printing, graphics design and stationery supply for events and institutions.',
+    description: 'Combines graphics design with digital/offset printing and stationery supply. Example scenario: an organization preparing for an event or annual program could use this package to get banners, printed stationery and branded materials produced together.',
+    features: ['Graphics design & branding', 'Digital & offset printing', 'Stationery & office supplies', 'Sports & educational materials supply'],
+    benefits: ['Consistent branding across printed materials', 'One vendor for design and print production', 'Bulk stationery supply available'],
+    technologies: ['Graphic Design & Print Tools'],
+    icon: 'Printer',
     status: 'active',
     sort_order: 4,
   },
 ];
 
 export const INITIAL_INDUSTRIES: Industry[] = [
-  { id: 1, name: 'Federal, Provincial & Local Governments', slug: 'government', description: 'Ministries, departments, commissions, authorities and municipal offices.', icon: 'Landmark', sort_order: 1, is_active: true },
-  { id: 2, name: 'Development Partners', slug: 'development-partners', description: 'National and international development and donor organizations.', icon: 'Globe', sort_order: 2, is_active: true },
-  { id: 3, name: 'NGOs & Community Organizations', slug: 'ngo-community', description: 'Non-government and community-based organizations.', icon: 'Users', sort_order: 3, is_active: true },
-  { id: 4, name: 'Universities & Research Institutions', slug: 'academia-research', description: 'Higher education and research institutions.', icon: 'GraduationCap', sort_order: 4, is_active: true },
-  { id: 5, name: 'Private Sector', slug: 'private-sector', description: 'Companies, consultants and private institutions.', icon: 'Building2', sort_order: 5, is_active: true },
+  { id: 1, name: 'Government & Non-Government Organizations', slug: 'government-ngo', description: 'Tenders and supply contracts with government and non-government bodies.', icon: 'Landmark', sort_order: 1, is_active: true },
+  { id: 2, name: 'Companies, Firms & Businesses', slug: 'companies-firms', description: 'IT, networking and printing services for private businesses.', icon: 'Building2', sort_order: 2, is_active: true },
+  { id: 3, name: 'Schools, Colleges & Universities', slug: 'schools-colleges-universities', description: 'Computer classes, training and certification partnerships.', icon: 'GraduationCap', sort_order: 3, is_active: true },
+  { id: 4, name: 'General Public & Retail Customers', slug: 'general-public-retail', description: 'Hardware, electronics, stationery and printing for individuals.', icon: 'Users', sort_order: 4, is_active: true },
+  { id: 5, name: 'Domestic & International Agencies', slug: 'domestic-international-agencies', description: 'Data processing and IT infrastructure consultation services.', icon: 'Globe', sort_order: 5, is_active: true },
 ];
 
 export const INITIAL_TECHNOLOGIES: Technology[] = [
-  { id: 1, name: 'Laravel', slug: 'laravel', category_name: 'Backend', description: 'Robust PHP framework for secure, maintainable web APIs and systems.', website_url: 'https://laravel.com' },
-  { id: 2, name: 'ReactJS', slug: 'react', category_name: 'Frontend', description: 'Declarative, component-based user interfaces for websites and digital platforms.', website_url: 'https://react.dev' },
-  { id: 3, name: 'MySQL', slug: 'mysql', category_name: 'Database', description: 'Reliable relational database for MIS and data management systems.', website_url: 'https://mysql.com' },
-  { id: 4, name: 'Cloud Hosting & Servers', slug: 'cloud-hosting', category_name: 'Cloud & DevOps', description: 'Server setup, cloud hosting, and infrastructure management.', website_url: undefined },
-  { id: 5, name: 'Artificial Intelligence & Machine Learning', slug: 'ai-ml', category_name: 'AI', description: 'AI, machine learning and data-driven digital transformation solutions.', website_url: undefined },
-  { id: 6, name: 'Cyber Security', slug: 'cyber-security', category_name: 'Cloud & DevOps', description: 'Network, application and data security for digital systems.', website_url: undefined },
+  { id: 1, name: 'Laravel', slug: 'laravel', category_name: 'Backend', description: 'PHP framework used for custom software and web application backends.', website_url: 'https://laravel.com' },
+  { id: 2, name: 'ReactJS', slug: 'react', category_name: 'Frontend', description: 'Component-based framework for websites and web applications.', website_url: 'https://react.dev' },
+  { id: 3, name: 'MySQL', slug: 'mysql', category_name: 'Database', description: 'Relational database for websites, software and e-commerce platforms.', website_url: 'https://mysql.com' },
+  { id: 4, name: 'Networking & Server Hardware', slug: 'networking-server-hardware', category_name: 'Cloud & DevOps', description: 'Routers, switches, servers and structured cabling for office networks.', website_url: undefined },
+  { id: 5, name: 'E-Commerce Platforms', slug: 'ecommerce-platforms', category_name: 'Cloud & DevOps', description: 'Online store setup, management and delivery coordination.', website_url: undefined },
+  { id: 6, name: 'Graphic Design & Print Tools', slug: 'graphic-design-print-tools', category_name: 'Other', description: 'Design software for branding, graphics and print-ready artwork.', website_url: undefined },
 ];
 
 // No completed engagements to showcase yet — add real ones from Admin -> Projects.
 export const INITIAL_PROJECTS: Project[] = [];
 
-// A genuine company announcement (not a fabricated case study), factually
-// grounded in the Memorandum of Association.
+// A genuine company overview post (not a fabricated case study).
 export const INITIAL_BLOGS: Blog[] = [
   {
     id: 1,
-    title: 'Introducing Pragya Innovative Pvt. Ltd.',
-    slug: 'introducing-pragya-innovative',
-    excerpt: 'Pragya Innovative Pvt. Ltd. brings technology, research, policy consulting, publishing and capacity building together under one roof for clients across Nepal.',
-    content: `We are pleased to introduce Pragya Innovative Pvt. Ltd., a private limited company registered under the Companies Act, 2063, with its registered office in Bijuli Bazar, Kathmandu.
-
-## Why We Exist
-
-Organizations across government, development and private sectors often need to work with several different specialists — a software developer, a researcher, a policy consultant, and a publisher — to complete a single initiative. Pragya Innovative was formed to bring these capabilities together under one roof.
+    title: 'Digihub Innovation Center: IT, E-Commerce & Printing Solutions Under One Roof',
+    slug: 'digihub-innovation-center-overview',
+    excerpt: 'Digihub Innovation Center Pvt. Ltd. provides IT consultancy, software and website development, e-commerce, networking and hardware, training and certification, and printing and branding services in Nepal.',
+    content: `Digihub Innovation Center Pvt. Ltd. is a private limited company registered under the Companies Act, 2063, with its registered office in Suryabinayak Municipality, Bhaktapur.
 
 ## What We Do
 
-Our work spans five core areas:
+Our work spans six core areas:
 
-1. **IT, Software & Digital Infrastructure** — custom software, websites, MIS, cloud, cybersecurity and AI solutions.
-2. **Research, Survey & Data Management** — baseline studies, surveys, data management and monitoring & evaluation.
-3. **Policy, Management & Institutional Consulting** — laws, policies, plans, DPR, EIA/IEE and governance advisory.
-4. **Publishing, Digital Content & Communication** — books, reports, e-books and multimedia content.
-5. **Capacity Building, Collaboration & Professional Services** — training, workshops and research partnerships.
+1. **IT & Technology Consulting** — computer consultancy, ITC infrastructure and managed hosting.
+2. **Software & Website Development** — custom software and website design, development and support.
+3. **E-Commerce Solutions & Digital Marketing** — online store setup, delivery coordination and website marketing.
+4. **Computer Networking, Hardware & Electronics** — networking services and hardware/electronics supply.
+5. **Training, Seminars & Certification Courses** — technology training and certification with academic partners.
+6. **Printing, Branding, Graphics & Stationery** — printing, branding, graphics design and stationery supply.
 
 ## Who We Work With
 
-We work with federal, provincial and local governments, ministries, commissions, development partners, NGOs and community organizations, universities and research institutions, and the private sector.
+We work with government and non-government organizations, companies and firms, schools, colleges and universities, and individual and retail customers, participating in tenders and supplying goods and services accordingly.
 
-We look forward to working with you. Reach out through our contact page to discuss your requirements.`,
+Reach out through our contact page to discuss your requirements.`,
     category: { id: 1, name: 'Company News', slug: 'company-news' },
-    tags: [{ id: 1, name: 'Company Launch', slug: 'company-launch' }, { id: 2, name: 'Services', slug: 'services' }],
+    tags: [{ id: 1, name: 'Services', slug: 'services' }, { id: 2, name: 'IT & Technology', slug: 'it-technology' }],
     content_type: 'Company News',
     reading_time: 3,
     published_at: new Date().toISOString().slice(0, 10),
@@ -193,9 +203,9 @@ We look forward to working with you. Reach out through our contact page to discu
 export const INITIAL_TEAM: TeamMember[] = [
   {
     id: 1,
-    name: 'Uddhav Prasad Adhikari',
+    name: 'Laxmi Dahal',
     position: 'Founder',
-    biography: 'Uddhav Prasad Adhikari founded Pragya Innovative Pvt. Ltd. to bring technology, research and policy consulting together in service of Nepal\'s public, development and private sectors. He oversees the company\'s direction across its five core service areas — IT and digital infrastructure, research, policy consulting, publishing, and capacity building.',
+    biography: 'Laxmi Dahal founded Digihub Innovation Center Pvt. Ltd. to provide accessible IT consultancy, software and website development, e-commerce, networking and hardware, technology training, and printing and branding services to individuals, businesses and institutions across Nepal.',
     department: 'Leadership',
     skills: [],
     display_order: 1,
@@ -224,8 +234,8 @@ export const INITIAL_LEADS: Lead[] = [];
 export const INITIAL_POPUPS: Popup[] = [
   {
     id: 1,
-    title: 'Partner with Pragya Innovative',
-    description: 'Schedule a consultation to discuss your software, research, policy consulting or publishing needs.',
+    title: 'Partner with Digihub Innovation Center',
+    description: 'Get in touch to discuss your IT, e-commerce, networking, training or printing needs.',
     button_text: 'Contact Us',
     button_url: '/contact',
     type: 'Contact CTA',
@@ -242,23 +252,23 @@ export const INITIAL_POPUPS: Popup[] = [
 ];
 
 export const INITIAL_SETTINGS: Setting[] = [
-  { key: 'site_name', value: 'Pragya Innovative Pvt. Ltd.', group: 'general', type: 'text' },
-  { key: 'tagline', value: 'Innovation, Research & Technology for a Better Tomorrow', group: 'general', type: 'text' },
-  { key: 'company_description', value: 'Pragya Innovative Pvt. Ltd. is a Kathmandu-based company bringing together technology, research, policy consulting, publishing and capacity building under one roof for government, private and development-sector clients across Nepal.', group: 'general', type: 'textarea' },
+  { key: 'site_name', value: 'Digihub Innovation Center Pvt. Ltd.', group: 'general', type: 'text' },
+  { key: 'tagline', value: 'Complete IT, E-Commerce & Printing Solutions Under One Roof', group: 'general', type: 'text' },
+  { key: 'company_description', value: 'Digihub Innovation Center Pvt. Ltd. is a Bhaktapur-based company providing IT consultancy, software and website development, e-commerce solutions, computer networking and hardware, technology training and certification, and printing, branding and stationery services across Nepal.', group: 'general', type: 'textarea' },
   { key: 'pan_vat_number', value: '', group: 'general', type: 'text' },
-  { key: 'contact_email', value: 'info@pragyainnovative.com.np', group: 'contact', type: 'text' },
+  { key: 'contact_email', value: 'info@digihubic.com.np', group: 'contact', type: 'text' },
   { key: 'phone', value: '+977-1-XXXXXXX', group: 'contact', type: 'text' },
-  { key: 'address', value: 'Bijuli Bazar, Kathmandu Metropolitan City Ward No. 10, Kathmandu, Nepal', group: 'contact', type: 'text' },
-  { key: 'maps_lat', value: '27.6941', group: 'contact', type: 'text' },
-  { key: 'maps_lng', value: '85.3336', group: 'contact', type: 'text' },
-  { key: 'maps_embed_url', value: 'https://www.google.com/maps?q=Bijuli+Bazar,+Kathmandu&output=embed', group: 'contact', type: 'text' },
+  { key: 'address', value: 'Suryabinayak Municipality Ward No. 3, Bhaktapur, Nepal', group: 'contact', type: 'text' },
+  { key: 'maps_lat', value: '27.6636', group: 'contact', type: 'text' },
+  { key: 'maps_lng', value: '85.4300', group: 'contact', type: 'text' },
+  { key: 'maps_embed_url', value: 'https://www.google.com/maps?q=Suryabinayak,+Bhaktapur&output=embed', group: 'contact', type: 'text' },
   { key: 'social_links', value: JSON.stringify([]), group: 'social', type: 'json' },
-  { key: 'meta_title', value: 'Pragya Innovative Pvt. Ltd. | IT, Research & Consulting in Nepal', group: 'seo', type: 'text' },
-  { key: 'meta_description', value: 'Pragya Innovative is a Kathmandu-based company providing software & digital solutions, research and data management, policy and institutional consulting, publishing, and capacity-building services.', group: 'seo', type: 'textarea' },
-  { key: 'footer_about_text', value: 'Pragya Innovative Pvt. Ltd. provides IT, research, policy consulting, publishing and capacity-building services in Nepal.', group: 'footer', type: 'text' },
-  { key: 'footer_newsletter_heading', value: 'Stay Updated with Pragya Innovative', group: 'footer', type: 'text' },
-  { key: 'footer_newsletter_subtext', value: 'Occasional updates on our research, publications and services.', group: 'footer', type: 'textarea' },
-  { key: 'footer_copyright', value: '© 2026 Pragya Innovative Pvt. Ltd. All rights reserved.', group: 'footer', type: 'text' },
+  { key: 'meta_title', value: 'Digihub Innovation Center Pvt. Ltd. | IT, E-Commerce & Printing Solutions in Nepal', group: 'seo', type: 'text' },
+  { key: 'meta_description', value: 'Digihub Innovation Center provides IT consultancy, software & website development, e-commerce, networking & hardware, training & certification, and printing & branding services in Bhaktapur, Nepal.', group: 'seo', type: 'textarea' },
+  { key: 'footer_about_text', value: 'Digihub Innovation Center Pvt. Ltd. provides IT, e-commerce, networking, training and printing services in Nepal.', group: 'footer', type: 'text' },
+  { key: 'footer_newsletter_heading', value: 'Stay Updated with Digihub Innovation Center', group: 'footer', type: 'text' },
+  { key: 'footer_newsletter_subtext', value: 'Occasional updates on our services, offers and technology tips.', group: 'footer', type: 'textarea' },
+  { key: 'footer_copyright', value: '© 2026 Digihub Innovation Center Pvt. Ltd. All rights reserved.', group: 'footer', type: 'text' },
   {
     key: 'homepage_sections_order',
     value: JSON.stringify([

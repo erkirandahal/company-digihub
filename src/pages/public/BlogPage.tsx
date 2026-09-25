@@ -7,9 +7,9 @@ import { usePageMeta } from '../../hooks/usePageMeta';
 
 export const BlogPage: React.FC = () => {
   usePageMeta({
-    title: 'Blog & Insights | Pragya Innovative Pvt. Ltd.',
+    title: 'Blog & Insights | Digihub Innovation Center Pvt. Ltd.',
     description:
-      'Articles, research notes and updates from Pragya Innovative on technology, research, policy and publishing.',
+      'Articles and updates from Digihub Innovation Center on IT, e-commerce, networking and printing.',
   });
   const [blogs, setBlogs] = useState<Blog[]>([]);
   const [searchTerm, setSearchTerm] = useState('');
@@ -46,7 +46,7 @@ export const BlogPage: React.FC = () => {
               Blog & Insights
             </h1>
             <p className="text-slate-600 text-base leading-relaxed">
-              Articles, research notes and updates from Pragya Innovative on technology, research, policy and publishing.
+              Articles and updates from Digihub Innovation Center on IT, e-commerce, networking and printing.
             </p>
           </div>
         </div>

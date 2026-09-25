@@ -59,11 +59,11 @@ export const Footer: React.FC = () => {
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
             <h3 className="text-xl font-bold text-slate-900 mb-1">
-              {footer_newsletter_heading || 'Stay Updated with Pragya Innovative'}
+              {footer_newsletter_heading || 'Stay Updated with Digihub Innovation Center'}
             </h3>
             <p className="text-slate-500 text-sm max-w-xl">
               {footer_newsletter_subtext ||
-                'Occasional updates on our research, publications and services.'}
+                'Occasional updates on our services, offers and technology tips.'}
             </p>
           </div>
           <div className="w-full md:w-auto">
@@ -124,8 +124,8 @@ export const Footer: React.FC = () => {
             <p className="text-slate-500 text-sm leading-relaxed max-w-sm">
               {footer_about_text ||
                 (site_name
-                  ? `${site_name} provides IT, research, policy consulting, publishing and capacity-building services in Nepal.`
-                  : 'Providing IT, research, policy consulting, publishing and capacity-building services in Nepal.')}
+                  ? `${site_name} provides IT, e-commerce, networking, training and printing services in Nepal.`
+                  : 'Providing IT, e-commerce, networking, training and printing services in Nepal.')}
             </p>
             <div className="space-y-2 pt-2 text-xs text-slate-500">
               {address && (
@@ -176,28 +176,33 @@ export const Footer: React.FC = () => {
             </h4>
             <ul className="space-y-2.5 text-sm">
               <li>
-                <Link to="/services/it-software-digital-infrastructure" className="hover:text-indigo-700 transition-colors">
-                  IT & Software
+                <Link to="/services/it-technology-consulting" className="hover:text-indigo-700 transition-colors">
+                  IT Consulting
                 </Link>
               </li>
               <li>
-                <Link to="/services/research-survey-data-management" className="hover:text-indigo-700 transition-colors">
-                  Research & Data
+                <Link to="/services/software-website-development" className="hover:text-indigo-700 transition-colors">
+                  Software & Websites
                 </Link>
               </li>
               <li>
-                <Link to="/services/policy-management-institutional-consulting" className="hover:text-indigo-700 transition-colors">
-                  Policy Consulting
+                <Link to="/services/ecommerce-solutions-digital-marketing" className="hover:text-indigo-700 transition-colors">
+                  E-Commerce
                 </Link>
               </li>
               <li>
-                <Link to="/services/publishing-digital-content-communication" className="hover:text-indigo-700 transition-colors">
-                  Publishing
+                <Link to="/services/computer-networking-hardware-electronics" className="hover:text-indigo-700 transition-colors">
+                  Networking & Hardware
                 </Link>
               </li>
               <li>
-                <Link to="/services/capacity-building-collaboration-professional-services" className="hover:text-indigo-700 transition-colors">
-                  Capacity Building
+                <Link to="/services/training-seminars-certification-courses" className="hover:text-indigo-700 transition-colors">
+                  Training & Certification
+                </Link>
+              </li>
+              <li>
+                <Link to="/services/printing-branding-graphics-stationery" className="hover:text-indigo-700 transition-colors">
+                  Printing & Branding
                 </Link>
               </li>
             </ul>

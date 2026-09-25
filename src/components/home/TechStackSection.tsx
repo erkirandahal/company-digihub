@@ -6,7 +6,7 @@ interface Props {
   technologies: Technology[];
 }
 
-const techCategories = ['All', 'Backend', 'Frontend', 'Database', 'Cloud & DevOps', 'AI'];
+const techCategories = ['All', 'Backend', 'Frontend', 'Database', 'Cloud & DevOps', 'Other'];
 
 export const TechStackSection: React.FC<Props> = ({ technologies }) => {
   const [activeTechCategory, setActiveTechCategory] = useState<string>('All');
@@ -23,10 +23,10 @@ export const TechStackSection: React.FC<Props> = ({ technologies }) => {
           Technology Stack
         </div>
         <h2 className="text-3xl font-extrabold text-slate-900 tracking-tight">
-          Battle-Tested, Maintainable Engineering
+          Tools & Technologies We Work With
         </h2>
         <p className="text-slate-600 text-sm mt-1">
-          We deliberately select frameworks that deliver long-term maintainability and high runtime performance.
+          From web development frameworks to networking hardware and design tools.
         </p>
 
         {/* Category Tabs */}

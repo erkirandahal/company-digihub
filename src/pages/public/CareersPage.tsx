@@ -7,9 +7,9 @@ import { usePageMeta } from '../../hooks/usePageMeta';
 
 export const CareersPage: React.FC = () => {
   usePageMeta({
-    title: 'Careers & Open Roles | Pragya Innovative Pvt. Ltd.',
+    title: 'Careers & Open Roles | Digihub Innovation Center Pvt. Ltd.',
     description:
-      'Join Pragya Innovative and work across technology, research, policy consulting and publishing in Nepal.',
+      'Join Digihub Innovation Center and work across IT, e-commerce, networking, training and printing in Nepal.',
   });
   const [careers, setCareers] = useState<Career[]>([]);
   const [loading, setLoading] = useState(true);
@@ -31,10 +31,10 @@ export const CareersPage: React.FC = () => {
               Work With Us
             </span>
             <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight">
-              Careers at Pragya Innovative Pvt. Ltd.
+              Careers at Digihub Innovation Center Pvt. Ltd.
             </h1>
             <p className="text-slate-600 text-base leading-relaxed">
-              Join a team working across technology, research, policy consulting, publishing and capacity building in Nepal.
+              Join a team working across IT consulting, software, networking, training and printing in Nepal.
             </p>
           </div>
         </div>
@@ -46,28 +46,28 @@ export const CareersPage: React.FC = () => {
           <div className="p-6 rounded-2xl bg-white border border-slate-200 shadow-xs space-y-2">
             <h4 className="font-bold text-slate-900 text-base">Multi-Disciplinary Work</h4>
             <p className="text-slate-600 text-xs leading-relaxed">
-              Work across software, research, policy consulting and publishing engagements.
+              Work across software, networking, training and printing engagements.
             </p>
           </div>
 
           <div className="p-6 rounded-2xl bg-white border border-slate-200 shadow-xs space-y-2">
             <h4 className="font-bold text-slate-900 text-base">Continuous Learning</h4>
             <p className="text-slate-600 text-xs leading-relaxed">
-              Opportunities for professional development, training and capacity building.
+              Opportunities for professional development and technical training.
             </p>
           </div>
 
           <div className="p-6 rounded-2xl bg-white border border-slate-200 shadow-xs space-y-2">
-            <h4 className="font-bold text-slate-900 text-base">Kathmandu-Based Team</h4>
+            <h4 className="font-bold text-slate-900 text-base">Bhaktapur-Based Team</h4>
             <p className="text-slate-600 text-xs leading-relaxed">
-              Based in Bijuli Bazar, Kathmandu, working with clients across Nepal.
+              Based in Suryabinayak, Bhaktapur, working with clients across Nepal.
             </p>
           </div>
 
           <div className="p-6 rounded-2xl bg-white border border-slate-200 shadow-xs space-y-2">
-            <h4 className="font-bold text-slate-900 text-base">Real Public Impact</h4>
+            <h4 className="font-bold text-slate-900 text-base">Real Impact</h4>
             <p className="text-slate-600 text-xs leading-relaxed">
-              Contribute to research, policy and technology work that supports institutions across Nepal.
+              Contribute to IT and business services work that supports institutions across Nepal.
             </p>
           </div>
         </div>

@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { CheckCircle2, Target, Eye, Landmark, Globe2, Users, GraduationCap, Building2, FileText } from 'lucide-react';
+import { CheckCircle2, Target, Eye, Landmark, Building2, GraduationCap, Users, Globe2, FileText } from 'lucide-react';
 import { usePageMeta } from '../../hooks/usePageMeta';
 
 export const AboutPage: React.FC = () => {
   usePageMeta({
-    title: 'About Us | Pragya Innovative Pvt. Ltd.',
+    title: 'About Us | Digihub Innovation Center Pvt. Ltd.',
     description:
-      'Pragya Innovative Pvt. Ltd. is a Kathmandu-based company bringing together technology, research, policy consulting, publishing and capacity building under one roof.',
+      'Digihub Innovation Center Pvt. Ltd. is a Bhaktapur-based company providing IT, e-commerce, networking, training and printing services under one roof.',
   });
 
   return (
@@ -20,13 +20,13 @@ export const AboutPage: React.FC = () => {
               Company Profile
             </span>
             <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight">
-              About Pragya Innovative
+              About Digihub Innovation Center
             </h1>
             <p className="text-slate-600 text-base leading-relaxed">
-              Pragya Innovative Pvt. Ltd. is a private limited company established under the Companies Act, 2063 (Nepal), with its registered office at Bijuli Bazar, Kathmandu Metropolitan City Ward No. 10, Kathmandu. It works in manufacturing, trading and services.
+              Digihub Innovation Center Pvt. Ltd. is a private limited company established under the Companies Act, 2063 (Nepal), with its registered office in Suryabinayak Municipality Ward No. 3, Bhaktapur. It works in trading and services.
             </p>
             <p className="text-slate-600 text-base leading-relaxed">
-              The company brings together technology, research, policy consulting, publishing and capacity building under one roof. It serves federal, provincial and local governments, ministries, commissions, public and community organizations, development partners, universities, research institutions and the private sector.
+              The company brings together IT and technology consulting, software and website development, e-commerce, computer networking and hardware, technology training and certification, and printing, branding and stationery under one roof.
             </p>
           </div>
         </div>
@@ -39,10 +39,14 @@ export const AboutPage: React.FC = () => {
             <FileText className="w-5 h-5 text-indigo-700" />
             <h2 className="text-xl font-bold text-slate-900">Company Snapshot</h2>
           </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 text-sm">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-7 gap-6 text-sm">
             <div>
               <p className="text-slate-400 text-xs uppercase tracking-wider font-semibold mb-1">Company Type</p>
               <p className="text-slate-800 font-semibold">Private Limited</p>
+            </div>
+            <div>
+              <p className="text-slate-400 text-xs uppercase tracking-wider font-semibold mb-1">Registration No.</p>
+              <p className="text-slate-800 font-semibold">298094/079/080</p>
             </div>
             <div>
               <p className="text-slate-400 text-xs uppercase tracking-wider font-semibold mb-1">Registered Under</p>
@@ -50,19 +54,19 @@ export const AboutPage: React.FC = () => {
             </div>
             <div>
               <p className="text-slate-400 text-xs uppercase tracking-wider font-semibold mb-1">Established</p>
-              <p className="text-slate-800 font-semibold">2083 Bhadra 16 B.S.</p>
+              <p className="text-slate-800 font-semibold">2079 Bhadra 17 B.S.</p>
             </div>
             <div>
               <p className="text-slate-400 text-xs uppercase tracking-wider font-semibold mb-1">Nature of Business</p>
-              <p className="text-slate-800 font-semibold">Manufacturing, Trading & Services</p>
+              <p className="text-slate-800 font-semibold">Trading & Services</p>
             </div>
             <div>
               <p className="text-slate-400 text-xs uppercase tracking-wider font-semibold mb-1">Paid-Up Capital</p>
-              <p className="text-slate-800 font-semibold">NPR 1,00,000</p>
+              <p className="text-slate-800 font-semibold">NPR 25,00,000</p>
             </div>
             <div>
               <p className="text-slate-400 text-xs uppercase tracking-wider font-semibold mb-1">Shares</p>
-              <p className="text-slate-800 font-semibold">1,000 @ NPR 100</p>
+              <p className="text-slate-800 font-semibold">25,000 @ NPR 100</p>
             </div>
           </div>
         </div>
@@ -77,7 +81,7 @@ export const AboutPage: React.FC = () => {
             </div>
             <h3 className="text-xl font-bold text-slate-900">Our Mission</h3>
             <p className="text-slate-600 text-sm leading-relaxed">
-              To deliver reliable technology, evidence-based research and practical consulting that strengthen institutions and support sustainable development in Nepal.
+              To make reliable IT, e-commerce, networking, training and printing services accessible to businesses, institutions and individuals across Nepal.
             </p>
           </div>
 
@@ -87,7 +91,7 @@ export const AboutPage: React.FC = () => {
             </div>
             <h3 className="text-xl font-bold text-slate-900">Our Vision</h3>
             <p className="text-slate-600 text-sm leading-relaxed">
-              To be a trusted partner for innovation, knowledge and digital transformation.
+              To be a trusted, one-stop technology and business services partner in Nepal.
             </p>
           </div>
         </div>
@@ -101,7 +105,7 @@ export const AboutPage: React.FC = () => {
               Why Choose Us
             </h2>
             <p className="text-slate-600 text-sm mt-2">
-              Technology, research, consulting and publishing working together.
+              IT, e-commerce, networking, training and printing working together.
             </p>
           </div>
 
@@ -112,37 +116,37 @@ export const AboutPage: React.FC = () => {
                 <span>One-Stop Solution</span>
               </h4>
               <p className="text-slate-600 text-sm leading-relaxed pl-7">
-                Technology, research, consulting and publishing under one roof.
+                IT, e-commerce, networking, training and printing under one roof.
               </p>
             </div>
 
             <div className="p-6 rounded-2xl bg-white border border-slate-200 shadow-xs space-y-2">
               <h4 className="text-base font-bold text-slate-900 flex items-center gap-2">
                 <CheckCircle2 className="w-5 h-5 text-emerald-600" />
-                <span>Multi-Sector Expertise</span>
+                <span>Software to Hardware</span>
               </h4>
               <p className="text-slate-600 text-sm leading-relaxed pl-7">
-                Governance, environment, climate, GESI, engineering and law.
+                Websites and software, networking and hardware, all from one team.
               </p>
             </div>
 
             <div className="p-6 rounded-2xl bg-white border border-slate-200 shadow-xs space-y-2">
               <h4 className="text-base font-bold text-slate-900 flex items-center gap-2">
                 <CheckCircle2 className="w-5 h-5 text-emerald-600" />
-                <span>Evidence-Based Approach</span>
+                <span>Training & Certification</span>
               </h4>
               <p className="text-slate-600 text-sm leading-relaxed pl-7">
-                Data-driven research and monitoring & evaluation.
+                Partnerships with schools, colleges and universities for computer classes and certification.
               </p>
             </div>
 
             <div className="p-6 rounded-2xl bg-white border border-slate-200 shadow-xs space-y-2">
               <h4 className="text-base font-bold text-slate-900 flex items-center gap-2">
                 <CheckCircle2 className="w-5 h-5 text-emerald-600" />
-                <span>Future-Ready</span>
+                <span>Print & Branding Too</span>
               </h4>
               <p className="text-slate-600 text-sm leading-relaxed pl-7">
-                Artificial intelligence, machine learning and digital transformation.
+                Digital and offset printing, graphics design and stationery supply.
               </p>
             </div>
           </div>
@@ -160,36 +164,36 @@ export const AboutPage: React.FC = () => {
           <div className="flex items-start gap-3 p-5 rounded-xl bg-white border border-slate-200">
             <Landmark className="w-5 h-5 text-indigo-700 mt-0.5 shrink-0" />
             <div>
-              <p className="text-sm font-semibold text-slate-800">Federal, Provincial & Local Governments</p>
-              <p className="text-xs text-slate-500 mt-0.5">Ministries, departments, commissions, authorities and municipal offices.</p>
-            </div>
-          </div>
-          <div className="flex items-start gap-3 p-5 rounded-xl bg-white border border-slate-200">
-            <Globe2 className="w-5 h-5 text-indigo-700 mt-0.5 shrink-0" />
-            <div>
-              <p className="text-sm font-semibold text-slate-800">Development Partners</p>
-              <p className="text-xs text-slate-500 mt-0.5">National and international development and donor organizations.</p>
-            </div>
-          </div>
-          <div className="flex items-start gap-3 p-5 rounded-xl bg-white border border-slate-200">
-            <Users className="w-5 h-5 text-indigo-700 mt-0.5 shrink-0" />
-            <div>
-              <p className="text-sm font-semibold text-slate-800">NGOs & Community Organizations</p>
-              <p className="text-xs text-slate-500 mt-0.5">Non-government and community-based organizations.</p>
-            </div>
-          </div>
-          <div className="flex items-start gap-3 p-5 rounded-xl bg-white border border-slate-200">
-            <GraduationCap className="w-5 h-5 text-indigo-700 mt-0.5 shrink-0" />
-            <div>
-              <p className="text-sm font-semibold text-slate-800">Universities & Research Institutions</p>
-              <p className="text-xs text-slate-500 mt-0.5">Higher education and research institutions.</p>
+              <p className="text-sm font-semibold text-slate-800">Government & Non-Government Organizations</p>
+              <p className="text-xs text-slate-500 mt-0.5">Tenders and supply contracts with government and non-government bodies.</p>
             </div>
           </div>
           <div className="flex items-start gap-3 p-5 rounded-xl bg-white border border-slate-200">
             <Building2 className="w-5 h-5 text-indigo-700 mt-0.5 shrink-0" />
             <div>
-              <p className="text-sm font-semibold text-slate-800">Private Sector</p>
-              <p className="text-xs text-slate-500 mt-0.5">Companies, consultants and private institutions.</p>
+              <p className="text-sm font-semibold text-slate-800">Companies, Firms & Businesses</p>
+              <p className="text-xs text-slate-500 mt-0.5">IT, networking and printing services for private businesses.</p>
+            </div>
+          </div>
+          <div className="flex items-start gap-3 p-5 rounded-xl bg-white border border-slate-200">
+            <GraduationCap className="w-5 h-5 text-indigo-700 mt-0.5 shrink-0" />
+            <div>
+              <p className="text-sm font-semibold text-slate-800">Schools, Colleges & Universities</p>
+              <p className="text-xs text-slate-500 mt-0.5">Computer classes, training and certification partnerships.</p>
+            </div>
+          </div>
+          <div className="flex items-start gap-3 p-5 rounded-xl bg-white border border-slate-200">
+            <Users className="w-5 h-5 text-indigo-700 mt-0.5 shrink-0" />
+            <div>
+              <p className="text-sm font-semibold text-slate-800">General Public & Retail Customers</p>
+              <p className="text-xs text-slate-500 mt-0.5">Hardware, electronics, stationery and printing for individuals.</p>
+            </div>
+          </div>
+          <div className="flex items-start gap-3 p-5 rounded-xl bg-white border border-slate-200">
+            <Globe2 className="w-5 h-5 text-indigo-700 mt-0.5 shrink-0" />
+            <div>
+              <p className="text-sm font-semibold text-slate-800">Domestic & International Agencies</p>
+              <p className="text-xs text-slate-500 mt-0.5">Data processing and IT infrastructure consultation services.</p>
             </div>
           </div>
         </div>
@@ -201,7 +205,7 @@ export const AboutPage: React.FC = () => {
           <div>
             <h3 className="text-2xl font-bold">Have a project in mind?</h3>
             <p className="text-indigo-100 text-sm mt-1">
-              Let's discuss your software, research, policy consulting or publishing needs.
+              Let's discuss your IT, e-commerce, networking, training or printing needs.
             </p>
           </div>
           <Link
